@@ -1,0 +1,74 @@
+@media all and (max-width:1200px) { #aside .left_banner{display:none;} }
+#aside .right_banner{
+	background-color : #fff;
+	border : 1px solid #ddd;
+	text-align: center;
+	position: fixed;
+	right: 50%;
+	margin-right : -607px;
+	top: 147px;
+	width : 75px;
+}
+
+#aside .right_banner>div.first{
+	background-color: #ff893b;
+	font-family: "돋움",Dotum;
+	font-size: 11px;
+	color : #fff;
+	height : 25px;
+	line-height: 25px;
+}
+
+#aside .right_banner>ul{
+	position: absolute;
+	height : 248px;
+	padding-top : 10px;
+
+/*이정훈 2013-11-14*/
+	margin-top: 0px;
+	padding-left: 0px;
+/*이정훈 2013-11-14*/
+}
+#aside .right_banner>ul li{
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+#aside .right_banner>div.last{
+    position : relative;
+    margin-top : 264px;
+}
+#aside .right_banner>div.last .top{
+	background-color: #efefef;
+    height : 25px;
+    line-height: 30px;
+	font-family: "돋움",Dotum;
+    font-weight:bold;
+    font-size: 10px;
+    color : #666;
+    cursor: pointer;
+}
+
+#aside .right_banner>div.last .top:before{
+	position : absolute;
+	content: "^";
+	font-family: "돋움",Dotum;
+	font-weight:bold;
+	size:9px;
+	top : -6px;
+	left : 32.5px;
+}
+
+
+
+
+
+
+
+/*이정훈 2013-11-14*/
+.product-show .price-info .buttons{
+	text-align: right;
+	margin: 0 33px 1.6em 0px;	
+}
+
+
+/*이정훈 2013-11-14*/

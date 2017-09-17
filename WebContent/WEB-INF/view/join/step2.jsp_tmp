@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="a" tagdir="/WEB-INF/tags" %>
+<a:html title=" - User Action Test : Join">
+
+<div class="article">
+<h1>가입 절차 - Step2</h1>
+<form action="join?step=3" method="post" enctype="multipart/form-data" class="validator">
+<fieldset>
+
+<h2>이메일 인증</h2>
+<p>아직 기능은 미구현 상태</p>
+
+<input type="radio" value="1" name="rad" id="rad1" required="required" /><label for="rad1">택일1</label>
+<input type="radio" value="1" name="rad" id="rad2" required="required" /><label for="rad2">택일2</label>
+<input type="radio" value="1" name="rad" id="rad3" required="required" /><label for="rad3">택일3</label>
+</fieldset>
+<button type="submit" class="artn-button">다음</button>
+</form>
+
+</div>
+</a:html>

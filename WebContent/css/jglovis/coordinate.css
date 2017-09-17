@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* 2013.09.11 by shkang */
+
+ #wrap_innerCoord {
+  /* height: 100%; */
+  width: 600px;
+  height: 450px;
+  position : relative;
+}
+#map-canvas, #map_canvas {
+  height: 100%;
+  width: 100%;
+}
+@media print {
+	#wrap_innerCoord {
+	  height: auto;
+	}
+	
+	#map-canvas, #map_canvas {
+	  height: 100%;
+	}
+}
+/* #dialog_Coordinate{
+	position : relative;
+	height:auto;
+} */
+#map_panel {
+  position: absolute;
+  /* top: 5px; */
+  /* left: 50%; */
+  /* margin-left: -180px; */
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+}

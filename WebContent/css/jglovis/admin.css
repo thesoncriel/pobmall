@@ -1,0 +1,385 @@
+.user-list .artn-search p label{
+	display: inline-block;
+	width: 60px;
+}
+
+
+/*통증선택 스텝*/
+.layout-contents .artn-bg-64.step3 h2{	
+	width: 321px;
+	border-right: 1px solid #d9d9d9;
+}
+/*통증선택 스텝*/
+
+#search-detail table {border-collapse: collapse; margin-bottom: 0.5em; width: 100%; border: 3px solid #dbdbdb;}
+
+
+
+#search-detail th {background-color: #fff;}
+#search-detail th {width: 50px; text-align: left;}
+#search-detail th,
+#search-detail td {padding: 0 0.5em 0 0.5em;}
+#search-detail th{
+	padding-left: 20px;
+	padding-top: 5px;
+	width: 65px;
+}
+#search-detail td{
+	padding-top: 5px;
+}
+#search-detail input[type='text'] {width: 80px;}
+
+#button_SelectionComplete { height: 25px;}
+
+
+
+
+
+/*관리자 메뉴 - 그룹 관리 - 그룹 정보 2013. 09. 11. 이정훈 시작*/
+
+/*
+===관리자 기능 class===
+사용자관리: user
+그룹관리: group
+그룹사용자관리: groupuser
+*/
+
+.board-show.group{
+   	float: left;
+   	width: 320px;
+	height: 213px;
+	
+	/* border-top: 1px solid #cccccc;
+   	border-bottom: 1px solid #cccccc; */
+   	font-size: 13px;
+   			
+	margin-right: 25px;
+	margin-top: 2px;
+	margin-bottom: 20px;
+	   		
+	border-collapse: collapse;
+}
+
+
+.board-show.group tbody tr:nth-of-type(odd){
+	background: #f8f8f8;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.board-show.group tbody tr th {
+	background: none;
+	width: 60px;
+		
+	border-right: 1px solid #cccccc;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.board-show.group tbody tr th, .board-show.group tbody tr td {
+	padding: 5px 10px 5px 10px;
+}
+.board-show.group tbody tr td {
+	width: 245px;
+}
+.board-show.group+img{
+	width: 306px;
+	height: 204px;
+}
+
+
+
+/*관리자 메뉴 - 그룹 관리 - 그룹 정보 2013. 09. 11. 이정훈 종료*/
+
+/* 처방전 통계 그래프 기능 추가 - 2013.09.16 by jhson [시작] */
+/* .stats				{position: relative; }
+.stats .stats-item	{display: inline-block; } */
+/* .stats table.data 		{border-collapse: collapse; width: 90%; margin: 2em 0 1em 2em;} */
+.stats table.data 		{border-collapse: collapse; width: 100%;display: none;}
+.stats table.data tr		{border-bottom: 1px solid #d1d1d1;}
+.stats table.data tr th:first-child,
+.stats table.data tr td:first-child	{background: url("images/artn-line_v_1x10_d1d1d1.png") no-repeat; background-position: 100% 50%;}
+.stats table.data tr th:first-child {width: 80px;}
+.stats table.data thead tr:first-child		{background-color: #A5AEBD;}
+.stats table.data tbody td			{padding-left: 0.5em;}
+/* 처방전 통계 그래프 기능 추가 - 2013.09.16 by jhson [종료] */
+
+
+/* 사용자 관리 - 사용자 등록 페이지 : 2013.09.16 by jhlee [시작] */
+.article .board-edit .user-name,
+.article .board-edit .valid-group.email input[type="text"]{
+	width: 100px;
+}
+.article .board-edit .valid-group.phone input[type="text"]{
+	width: 40px;
+	text-align: center;
+}
+.article .board-edit input[id^='datepicker']{
+	width: 80px;
+	text-align: center;
+}
+.article .board-edit .zipcode{
+	width: 60px;
+	text-align: center;
+}
+.board-edit label.address{
+	display: inline-block;
+	width: 3em;
+	vertical-align: middle;
+}
+.article .board-edit input[type='text'].address{
+	width: 600px;
+}
+/* 사용자 관리 - 사용자 등록 페이지 : 2013.09.16 by jhlee [종료] */
+
+
+
+/* 그룹 관리 - 그룹 등록 페이지 : 2013.09.16 by jhlee [시작] */
+.board-edit input[name='id'],/*사용자 ID*/
+.board-edit input[name='name'],
+.board-edit input[name='user_name']{
+	width: 100px;
+}
+.board-edit input[name='homepage'],
+.board-edit .map-coord{
+	width: 200px;
+}
+/* 그룹 관리 - 그룹 등록 페이지 : 2013.09.16 by jhlee [종료] */
+
+
+
+/*사용자 관리 - 사용자 비밀번호 확인 페이지 : 2013. 09. 16 jhlee [시작]*/
+.contents .user-password{
+	margin: 0 auto;
+	width: 410px;
+}
+.user-password .contents-base .article fieldset{
+	width: 210px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+.user-password .contents-base .article fieldset label{
+	display: inline-block;
+	width: 50px;
+}
+.user-password .contents-base .article fieldset span+span,
+.user-password .contents-base .article fieldset input[type="password"]{
+	width: 130px;
+	margin-left: 10px;
+}
+.user-password .contents-base .article fieldset .valid-msg{
+	display: block;
+	margin-top: 5px;
+}
+.user-password .contents-base .artn-button.board{
+	position: absolute;
+	margin-top: 13px;	
+}
+.user-password .contents-base .article h3{
+	font-size: 15px;
+}
+.user-password .contents-base .article p{
+	width: 285px;
+	margin-top: 0px;
+}
+/*사용자 관리 - 사용자 비밀번호 확인 페이지 : 2013. 09. 16 jhlee [종료]*/
+
+
+
+/*조합 관리 - 조합 관리 편집 페이지 : 2013. 09. 17 jhlee [시작]*/
+.board-edit.comb tr th{
+	width: 14%;
+}
+/*조합 관리 - 조합 관리 편집 페이지 : 2013. 09. 17 jhlee [종료]*/
+
+/*365plus 관리 - 365plus 관리 편집 페이지 : 2013. 09. 17 jhlee [시작]*/
+.board-edit.comb-365plus tr th{
+	width: 14%;
+}
+/*365plus 관리 - 365plus 관리 편집 페이지 : 2013. 09. 17 jhlee [종료]*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*서비스안내 - 사용안내 : 2013. 09. 27 jhlee [시작]*/
+/*
+/* .article.sub1_1{	
+	margin: 0 auto;
+	width: 90%;
+} */
+.section .sub10_1_contents{
+	margin-left: 160px;
+}
+.article.sub10_1 {
+	text-align: center;
+}
+@media all and (max-width: 1023px){
+	.article.sub10_1 img{
+		width: 100%;
+	}
+	.section .sub10_1_contents{
+		margin: 0 auto;
+	}	
+}
+*/
+.article.sub10_1 img{
+	width: 100%;
+}
+/*서비스안내 - 사용안내 : 2013. 09. 27 jhlee [종료]*/
+
+
+/*회사소개 - CI : 2013. 09. 27 jhlee [시작]*/
+.article.sub4_1_4{
+	width: 91%;
+	margin: 0 auto;
+}
+/*회사소개 - CI : 2013. 09. 27 jhlee [종료]*/
+
+/*회사소개 - 오시는 길 : 2013. 09. 27 jhlee [시작]*/
+.article.sub4_1_5{
+	width: 84%;
+	margin: 0 auto;
+}
+ 
+/*회사소개 - 오시는 길 : 2013. 09. 27 jhlee [종료]*/
+
+/*회사소개 - 오시는 길 : 2013. 09. 27 jhlee [시작]*/
+.article.sub4_1_3{
+	width: 90%;
+	margin: 0 auto;
+}
+/*회사소개 - 오시는 길 : 2013. 09. 27 jhlee [종료]*/
+
+/* 게시판 관리 페이지 : 2013.09.30 thkim [시작]*/
+.board-manager {border-collapse: collapse;}
+.board-manager thead th.no {width: 50px;}
+.board-manager tbody td.no{text-align: center;}
+.board-manager tbody td input[name='name'] {width: 130px;} 
+.board-manager tbody td input[name='contentsCode']{width: 70px;}
+.board-manager thead th .artn-button.board {float: right;}
+.board-manager th {
+	font-weight: bold;
+	background: url(images/commonbgpack/artn-bg-pack.png) no-repeat;
+	vertical-align: middle;
+	line-height: 30px;
+	background-position: 0px -32px;
+}
+/* 게시판 관리 페이지 : 2013.09.30 thkim [종료]*/
+
+/* 로그인 페이지 회원 가입하기 버튼 : 2013.10.07 jhlee [시작]*/
+.new_mem .artn-button a {
+	padding-top: 1px;
+	width: 81px;
+}
+
+
+/* 사용자 수정 페이지 : 2013.10.10 jhlee [종료]*/
+.board-edit thead td{
+	padding-top: 5px;
+	padding-bottom: 1px;
+}
+.board-edit thead td input[type="text"],
+.board-edit thead td input[type="file"],
+.board-edit thead td input[type="password"],
+.board-edit thead td select,
+.board-edit thead td .webnote_container{
+	margin-bottom: 4px;
+}
+
+.board-edit thead td .selectbox_phone{
+	width: 56px;
+	margin-left: 2px;
+}
+
+.board-edit thead td input[type="radio"],
+.board-edit thead td input[type="checkbox"],
+.board-edit thead td label{
+	float: left;
+}
+.board-edit thead td label{
+	margin-right: 10px;
+}
+.board-edit thead td span{
+	margin-right: 5px;
+}
+.board-edit thead td input[type="text"],
+.board-edit thead td select{
+	margin-right: 5px;
+}
+/* 사용자 수정 페이지 : 2013.10.10 jhlee [종료]*/
+
+/**/
+.sortable-grid{
+	margin-top: 1em;
+	position: relative;
+	float: left;
+	margin-bottom: 1em;
+}
+.sortable-grid .item{
+	display: inline-block;
+	float: left;
+	margin-left: 1em;
+}
+.sortable-grid .item .seq.square{
+	vertical-align: top;
+	background-color: #f80;
+	color: #fff;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	opacity: 0.75;
+}
+.sortable-grid .item a.file-link{
+	display: inline-block;
+	width: 47px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+/* 상품 등록 페이지 : 2013.11.15 shkang[시작]*/
+.product-edit input[type="text"]
+{
+	width : 100px;
+}
+/* 상품 등록 페이지 : 2013.11.15 shkang[whdfy]*/
+
+.tab.stats li{
+	background-color: #ccc;
+	color: #888;
+}
+.tab.stats a{
+	background-color: #888;
+	color: #fff;
+	font-weight: bold;
+	padding: 0.5em;
+	font-size: 14px;
+}
+.tab.stats a:hover,
+.tab.stats a.selected{
+	background-color: #999;
+	text-decoration: none;
+}
+
+/* Contact Us : 모바일에서 화면 흔들림 수정 - 2014.01.24 by jhson [시작] */
+.sub5_6 .board-edit textarea,
+.sub5_6 .board-edit input[name='company'],
+.sub5_6 .board-edit input[name='site'],
+.sub5_6 .board-edit input[name='contentName'] {
+	width: 95%;
+}
+/* Contact Us : 모바일에서 화면 흔들림 수정 - 2014.01.24 by jhson [종료] */

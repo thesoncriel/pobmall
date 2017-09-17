@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<boardList>
+- <board boardNo="1">
+	  <boardNo>1</boardNo>
+	  <name>공지사항</name>
+	  <contentsCode>sub3</contentsCode>
+	  <view>notice</view>
+	  <authList>0</authList>
+	  <authShow>0</authShow>	
+	  <authModify>1610612736</authModify>
+	  <authDelete>1610612736</authDelete>
+	  <rowLimit>10</rowLimit>
+  </board>  
+  <board boardNo="2">
+  	  <boardNo>2</boardNo>
+	  <name>자료실</name>
+	  <contentsCode>sub2</contentsCode>
+	  <view>file</view>
+	  <authList>0</authList>
+	  <authShow>0</authShow>	
+	  <authModify>1610612736</authModify>
+	  <authDelete>1610612736</authDelete>
+	  <rowLimit>10</rowLimit>
+  </board>  
+  <board boardNo="3">
+  	  <boardNo>3</boardNo>
+	  <name>묻고답하기</name>
+	  <contentsCode>sub1</contentsCode>
+	  <view>guest</view>
+	  <authList>0</authList>
+	  <authShow>0</authShow>	
+	  <authModify>0</authModify>
+	  <authDelete>0</authDelete>
+	  <rowLimit>10</rowLimit>
+  </board>
+ </boardList>

@@ -1,0 +1,921 @@
+/*
+ * :::: AROTECHNO Style Sheet Theme ::::
+ * author : jhson
+ * theme : jglovis (first default)
+ * date : 2013.11.19
+ * version : 1.1
+ * history :
+ */
+
+/*========================================================= common =========================================================*/
+body, header, nav, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td{
+/*font-size:100%;*/
+margin:0pt;
+padding:0pt;
+border: 0px;
+list-style-type: none;
+}
+
+@font-face {
+	font-family: "NanumGothic";
+	font-style: normal;
+	font-weight: 100; 
+	src: url("font/NanumGothic.eot"); 
+	src: local(※), url("font/NanumGothic.woff") format('woff'); 
+}
+
+@font-face {
+	font-family: "NanumGothic";
+	font-style: normal;
+	font-weight: 700; 
+	src: url("font/NanumGothicBold.eot"); 
+	src: local(※), url("font/NanumGothicBold.woff") format('woff'); 
+}
+
+@font-face {
+	font-family: "NanumMyeongjoExtraBold";
+	font-style: normal;
+	font-weight: bold;
+	src: url("font/NanumMyeongjoExtraBold.eot"); 
+	src: local(※), url("font/NanumMyeongjoExtraBold.woff") format('woff'); 
+}
+
+@font-face {
+	font-family: "malgun";
+	font-style: normal;
+	font-weight: bold;
+	src: url("font/malgun.eot"); 
+	src: local(*), url("font/malgun.woff") format('woff');
+}
+
+body{
+	font-family: "NanumGothic", "NanumGothicBold", "돋움", "arial black", sans-serif;
+	font-size: 12px;
+	color: #666666; 
+}
+div#body{
+	background-image: url('/img/jglovis/main/bg-content-wrap.gif');
+	background-repeat: repeat-x;
+} 
+/*메인과 서브 페이지의 중앙정렬*/
+.contents-wrap{			
+	width: 100%;
+	margin: 0px auto;
+}
+
+/*페이지 경로 위치 정렬*/
+#breadcrumbs{
+	float: right;
+	font-size: 11px;
+	/*header 수정 2013-11-07*/	
+		/* margin-top: 10px; */
+	/*header 수정 2013-11-07*/
+	margin-top: 5px;
+}
+h1, h2, h3, h4, h5, h6, p, .nav, table, ol, ul, dl, dt, dd, .figcaption	{ font-family: "나눔 고딕", "NanumGothic", "NanumGothicBold", "돋움", "arial black", sans-serif; }
+h1, h2, h3, h4, h5, h6 	{ font-weight: bold; /*margin: 4px 0;*/ }
+p 						{ font-size: 12px; }
+
+ul.style {padding-left: 40px;}
+ul.style>li {margin: 0.5em;}
+ul.style.circle>li {list-style-type: circle;}
+ul.style.disc>li {list-style-type: disc;}
+ul.style.square>li {list-style-type: square;}
+
+ol[type='1'], ol[type='1']>li {list-style-type: decimal;}
+ol[type='01'], ol[type='01']>li {list-style-type: decimal-leading-zero;}
+ol[type='A'], ol[type='A']>li {list-style-type: upper-alpha;}
+ol[type='a'], ol[type='a']>li {list-style-type: lower-alpha;}
+ol[type='I'], ol[type='I']>li {list-style-type: upper-roman;}
+ol[type='i'], ol[type='i']>li {list-style-type: lower-roman;}
+
+
+
+.contents h1 { font-size: 18px; color: #666666; margin: 0 0 0 12px; display: inline-block; }
+.contents h2 { font-size: 22px; color: #141414; margin: 1em 0 0.5em 0;}
+.contents h3 { font-size: 17px; color: #333333; }
+.contents h4 { font-size: 18px; color: #333333; }
+.contents h5 { font-size: 15px; margin: 1em 0; color: #181818; }
+.contents h6 { font-size: 13px; color: #333333; }
+
+a 		{ text-decoration: none; color:#939393; }
+a:hover { text-decoration: underline; }
+
+mark 	{ color: #ef8201; background: none; }
+em, q	{ color: #8cdce5; font-style: normal; }
+q		{ text-decoration: underline; }
+strong	{ color: #333333; }
+
+.effect.frame{		/*사진이나 그림의 테두리*/
+display: inline;
+border: 1px solid #ebebeb;
+
+-moz-box-shadow: 0px 0px 5px #ebebeb;
+-webkit-box-shadow: 0px 0px 5px #ebebeb;
+box-shadow: 0px 0px 5px #ebebeb;
+
+padding: 5px;
+margin-bottom: 20px;
+}
+.contents address{
+	font-style: normal;
+	line-height: 20px;
+}
+/*========================================================= icon pack =========================================================*/
+.artn-icon-16, .artn-icon-32, .artn-icon-64, .artn-icon-48, .artn-icon-96,
+.page-controller>a { background-image: url("images/artn-icons.png"); }
+
+.artn-icon-16, .artn-icon-32, .artn-icon-48, .artn-icon-64, .artn-icon-96, .artn-icon-128, .artn-bg-64 h2, .artn-bg-642 h2, .artn-bg-32 { display: inline-block; }
+
+.artn-icon-16, .artn-icon-32, .artn-icon-48, .artn-icon-64, .artn-icon-96, .artn-icon-128 { text-indent: -65535px; background-repeat: no-repeat; position: relative; text-align: left; }
+.artn-icon-16 { width: 16px; height: 16px; }
+.artn-icon-32 { width: 32px; height: 32px; }
+.artn-icon-48 { width: 48px; height: 48px; }
+.artn-icon-64 { width: 64px; height: 64px; }
+.artn-icon-96 { width: 96px; height: 96px; }
+.artn-icon-128 { width: 128px; height: 128px; }
+
+
+.artn-icon-16.gallary       {background-position: 0px 0px;}
+.artn-icon-16.calendar      {background-position: -16px 0px;}
+.artn-icon-16.chain      	{background-position: -32px 0px;}
+.artn-icon-16.chainoff		{background-position: -48px 0px;}
+.artn-icon-16.glasses   	{background-position: -64px 0px;}
+.artn-icon-16.new   	    {background-position: -80px 0px;}
+.artn-icon-16.orb           {background-position: -96px 0px;}
+.artn-icon-16.home          {background-position: -112px 0px;}
+.artn-icon-16.asterisk      {background-position: -128px 0px;}
+.artn-icon-16.delete      	{background-position: -144px 0px;}
+.artn-icon-16.shopping    	{background-position: -160px 0px;}
+.artn-icon-16.comment    	{background-position: -176px 0px;}
+.artn-icon-16.bookmark    	{background-position: -192px 0px;}
+.artn-icon-16.checked    	{background-position: -208px 0px; background-color: #399; }
+.artn-icon-16.search    	{background-position: -224px 0px;}
+.artn-icon-16.bullet1    	{background-position: -240px 0px;}
+
+.artn-icon-16.caret-thin-w   {background-position: 0px -16px;}
+.artn-icon-16.caret-thin-e   {background-position: -16px -16px;}
+.artn-icon-16.caret-m-sh-w   {background-position: -32px -16px;}
+.artn-icon-16.caret-m-sh-e   {background-position: -48px -16px;}
+.artn-icon-16.caret-m-w      {background-position: -64px -16px;}
+.artn-icon-16.caret-m-e      {background-position: -80px -16px;}
+.artn-icon-16.caret-sh-w     {background-position: -96px -16px;}
+.artn-icon-16.caret-sh-e     {background-position: -112px -16px;}
+.artn-icon-16.caret-w        {background-position: -128px -16px;}
+.artn-icon-16.caret-e        {background-position: -144px -16px;}
+.artn-icon-16.triangle-w     {background-position: -160px -16px;}
+.artn-icon-16.triangle-e     {background-position: -176px -16px;}
+
+.artn-icon-16.prev    {background-position: -192px -16px;}
+.artn-icon-16.next    {background-position: -208px -16px;}
+.artn-icon-16.play    {background-position: -224px -16px;}
+.artn-icon-16.pause   {background-position: -240px -16px;}
+.artn-icon-16.stop    {background-position: -256px -16px;}
+.artn-icon-16.first   {background-position: -272px -16px;}
+.artn-icon-16.last    {background-position: -288px -16px;}
+
+.artn-icon-16.car            {background-position: 0px -32px;}
+.artn-icon-16.subway         {background-position: -16px -32px;}
+.artn-icon-16.airplane       {background-position: -32px -32px;}
+.artn-icon-16.bus            {background-position: -48px -32px;}
+
+.artn-icon-16.ai         {background-position: 0px -48px;}
+
+.artn-icon-16.line1        {background-position: 0px -64px; }
+.artn-icon-16.line2        {background-position: -16px -64px; }
+.artn-icon-16.line3        {background-position: -32px -64px; }
+.artn-icon-16.line4        {background-position: -48px -64px; }
+.artn-icon-16.line5        {background-position: -64px -64px; }
+.artn-icon-16.line6        {background-position: -80px -64px; }
+.artn-icon-16.line7        {background-position: -96px -64px; }
+.artn-icon-16.line8        {background-position: -112px -64px; }
+.artn-icon-16.line9        {background-position: -128px -64px; }
+
+.artn-icon-16.hot			{background-position: 0px -80px; width :32px;}
+.artn-icon-16.reco       	{background-position: -32px -80px; width :32px;}
+.artn-icon-16.public       	{background-position: -64px -80px; width :32px;}
+.artn-icon-16.notice       	{background-position: -96px -80px; width :32px;}
+
+.artn-icon-16.arrow-circle-n        {background-position: 0px -96px; }
+.artn-icon-16.arrow-circle-e        {background-position: -16px -96px; }
+.artn-icon-16.arrow-circle-s        {background-position: -32px -96px; }
+.artn-icon-16.arrow-circle-w        {background-position: -48px -96px; }
+.artn-icon-16.arrow-square-n        {background-position: -64px -96px; }
+.artn-icon-16.arrow-square-e        {background-position: -80px -96px; }
+.artn-icon-16.arrow-square-s        {background-position: -96px -96px; }
+.artn-icon-16.arrow-square-w        {background-position: -112px -96px; }
+
+.artn-icon-16.circle-caret-1-n        {background-position: -128px -96px; }
+.artn-icon-16.circle-caret-1-e        {background-position: -144px -96px; }
+.artn-icon-16.circle-caret-1-s        {background-position: -160px -96px; }
+.artn-icon-16.circle-caret-1-w        {background-position: -176px -96px; }
+.artn-icon-16.circle-caret-2-n        {background-position: -192px -96px; }
+.artn-icon-16.circle-caret-2-e        {background-position: -208px -96px; }
+.artn-icon-16.circle-caret-2-s        {background-position: -224px -96px; }
+.artn-icon-16.circle-caret-2-w        {background-position: -240px -96px; }
+
+
+
+.artn-icon-32.gyeongui          {background-position: -144px -64px; height:16px;}
+.artn-icon-32.incheon         {background-position: -176px -64px; height:16px;}
+
+
+
+.artn-icon-32.more          {background-position: 0px -255px;}
+.artn-icon-32.email, 
+.artn-icon-32.email-1		{background-position: -32px -255px;}
+.artn-icon-32.alert			{background-position: -64px -255px;}
+.artn-icon-32.cart,
+.artn-icon-32.cart-1		{background-position: -96px -255px;}
+.artn-icon-32.close       {background-position: -128px -255px;}
+.artn-icon-32.close:hover       {background-position: -160px -255px;}
+.artn-icon-32.bookmark       {background-position: -192px -255px;}
+.artn-icon-32.carat-1-n       {background-position: -224px -255px}
+.artn-icon-32.carat-1-s       {background-position: -256px -255px;}
+.artn-icon-32.carat-1-n:hover       {background-position: -288px -255px;}
+.artn-icon-32.carat-1-s:hover       {background-position: -320px -255px;}
+
+.artn-icon-32.bars       	{background-position: -352px -255px}
+.artn-icon-32.login       	{background-position: -384px -255px;}
+.artn-icon-32.logout       	{background-position: -416px -255px;}
+.artn-icon-32.write       	{background-position: -448px -255px;}
+.artn-icon-32.mail			{background-position: -480px -255px;}
+.artn-icon-32.cart-2       	{background-position: -512px -255px;}
+.artn-icon-32.delivery      {background-position: -544px -255px;}
+.artn-icon-32.grid       	{background-position: -576px -255px;}
+.artn-icon-32.my	       	{background-position: -608px -255px;}
+.artn-icon-32.home			{background-position: -640px -255px;}
+.artn-icon-32.gear			{background-position: -672px -255px;}
+
+
+
+
+.artn-icon-32.circle-w       {background-position: 0px -288px;}
+.artn-icon-32.circle-e       {background-position: -32px -288px;}
+
+.artn-icon-32.page-first    {background-position: -64px -288px;}
+.artn-icon-32.page-prev      {background-position: -96px -288px;}
+.artn-icon-32.page-next      {background-position: -128px -288px;}
+.artn-icon-32.page-last      {background-position: -160px -288px;}
+
+.artn-icon-96.qaa       {background-position: 0px -320px;}
+.artn-icon-96.faq       {background-position: -96px -320px;}
+.artn-icon-96.location  {background-position: -192px -320px;}
+
+
+.artn-icon-96.note    {background-position: 0px -415px;}
+
+
+.artn-icon-96.custom1   {background-position: 0px -511px;}
+.artn-icon-96.custom2   {background-position: -96px -511px;}
+
+
+.artn-icon-128.calendar 	{background: url("images/artn-bg_128x128_calendar.png");}
+.artn-icon-128.faq   	    {background-position: -128px -607px;}
+.artn-icon-128.book     	{background-position: -256px -607px;}
+.artn-icon-128.megaphone	{background-position: -384px -607px;}
+.artn-icon-128.books        {background-position: -512px -607px;}
+.artn-icon-128.home         {background-position: -640px -607px;}
+
+
+.artn-icon-128.custom1      {background-position: 0px -735px;}
+.artn-icon-128.custom2      {background-position: -128px -735px;}
+
+.artn-icon-edge { position: absolute; top: 50%; margin-top: -9px; right: 0; }
+.m-action-icon { width: 40px; height: 40px; }
+.m-action-icon .artn-icon-32 { position: absolute; top: 4px; left: 4px; font-size: 0px; }
+
+.section.contents .artn-field-header{
+	background: url(images/artn-bg_field_header.png) no-repeat;    
+	color: #fff;
+	margin-top: 10px;
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	padding-left: 0.5em;
+	/*font-size: 13pt;*/
+	letter-spacing: -1px;
+	margin-bottom: 0px;
+}
+/*========================================================= dialog nontitlebar =========================================================*/
+.artn-dialog-nontitlebar .artn-icon-32.close{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+}
+.artn-dialog-nontitlebar.ui-dialog .ui-dialog-content{
+	padding: 1em 1em;
+}
+/*========================================================= ajax loading =========================================================*/
+.ajax-loading-mini{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url("images/artn-loading_16x16.gif");
+	background-repeat: no-repeat;
+}
+
+/*========================================================= page step 3 =========================================================*/
+.artn-bg-64 { display: block; }
+.hgroup.artn-bg-64,
+.hgroup.artn-bg-64 h2{
+	height: 35px;
+}
+.hgroup.artn-bg-64{
+	border: 1px solid #d9d9d9;
+	overflow: hidden;
+}
+.artn-bg-64 h2 { 
+	background-image: url("images/artn-bg_step_400x40.png");
+	background-position: 0% 50%;
+    display: inline-block;
+    font-size: 16pt;
+    margin: 0 -22px 0 0;
+    /*background-position: 0px -768px;*/
+    text-align: center;
+    line-height: 35px;
+}
+.artn-bg-64.step3 h2 {width: 35%;}
+.artn-bg-64 h2.selected      {background-image: url("images/artn-bg_step_400x40-selected.png"); background-position: 0% 50%; color:#fff;}
+.artn-bg-64 h2:first-child { background-position: 15% 50%; }
+.artn-bg-64 h2:last-child { background-position: 0% 50%; width: 36%;}/*
+.artn-bg-64 h2.selected:first-child { background-position: -22px 1px;}
+.artn-bg-64 h2.selected:last-child { background-position: 0px 1px;}*/
+/*========================================================= page step 4 =========================================================*/
+.artn-bg-64.step4 h2 { width: 27%; }
+.artn-bg-64.step4 h2:last-child { width: 28%; }
+
+
+/* 탭 아이템 너비 균등화 [시작]*/
+/* .equalize{
+	text-align: justify;
+	overflow: hidden;
+}
+.equalize:after{
+	content: ' ';
+	display: inline-block;
+	width: 100%;
+}
+.equalize:before {
+	content: ' ';
+	display: block;
+	margin-top: -1.25em;
+}
+.equalize li{
+	margin-right: -0.25em;
+	position: relative;
+	top: 1.25em;
+	display: inline-block;
+}
+.equalize.div3 li{
+	width: 34%;
+} */
+/* 탭 아이템 너비 균등화 [종료]*/
+
+
+/*병원 및 주치의 찾기 페이지*/
+	.search.top{
+		background-image: url(../img/menu4/service-search.png);
+		width: 646px;
+		height: 114px;
+		padding-left: 17px;
+		margin-bottom: 30px;
+	}
+	.search.top h2{
+		padding-top: 10px;
+		margin-left: 225px;
+		margin-bottom: 0px;
+		color: #666;
+	}
+	.search.top h3,
+	.search.top input[type="text"],
+	.search.top .flat{
+		float: left;
+		margin-top: 25px;
+	}
+	.search.top h3{
+		line-height: 25px;
+	}	
+	.search.top h3 span{
+		float: left;
+		margin-right: 5px;
+		margin-top: 7px;
+	}
+	
+	.search.top input[type="text"]{		
+		width: 235px;
+		height: 20px;
+		margin-left: 25px; 
+		margin-right: 17px;
+		border: 3px solid #69a034;
+	}
+	.search.top .custom1,
+	.search.top .custom2{
+		float: right;
+		margin-top: -45px;
+	}
+/*병원 및 주치의 찾기 페이지*/
+/*========================================================= mini board =========================================================*/
+.mini-board{ 
+	clear: both;
+	display: block;
+	/*height: 175px;*/
+}
+
+.mini-board,
+.mini-board .content{
+	width: 270px;
+}
+
+.mini-board .tab {
+	border-bottom: 1px solid #d0d0d0;
+	position: relative;
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+.mini-board .tab li{
+	display: inline-block;
+	float: left;
+	background-color: #dedede;
+	margin-right: 1px;
+}
+
+
+
+.mini-board .tab a{
+	text-decoration: none;
+    font-size:13px;
+    color: #ffffff;
+    font-weight: bold; 
+	display: block;
+    
+	padding-top: 7px;
+	padding-bottom: 8px;
+	background: url(images/bizbgpack/heal365-bg-edge/heal365-bg-edge2-off.png) no-repeat;
+	background-position: 100% 0%;
+	border-bottom-width: 0px;
+	/*border: 1px solid #d0d0d0;	
+	border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;*/
+    text-align: center;
+    width: 80px;
+}
+/*.mini-board .tab a:hover{
+	background: url('images/menu-hover.1x79.png') 0 50% repeat-x;
+}*/
+
+.mini-board .tab a.selected {
+    
+    background: url(images/bizbgpack/heal365-bg-edge/heal365-bg-edge2-on.png) no-repeat;
+	background-position: 100% 0%;
+    /*background-color: #e2e0e0;*/
+}
+
+.mini-board .content {
+    position: absolute;
+}
+
+.mini-board .content ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+.mini-board .content ul li{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.mini-board div ul li .date{
+    float: right;
+    clear: both;
+    text-align: right;
+    color:#6f6f6f;
+}
+.mini-board .artn-icon-32.more,
+.bottom-contents .section .product-slider .artn-icon-32.more{
+	position: absolute;
+	height: 20px;
+    right: 0px;
+    top: -35px;
+}
+.bottom-contents .section .product-slider .artn-icon-32.more{
+	top: -42px;
+}
+/*========================================================= button =========================================================*/
+.artn-button{
+	font-size: 8pt;
+	/*display: inline-block;*/
+	/*padding-top: 0px;*/
+	margin: 3px; 
+	/*padding-left: 3px;*/
+	/*height: 16px;*/ 
+	background-position: 50% 50%;
+	/*text-align: center;*/
+	/*vertical-align: middle;*/
+	/*padding: 2px 6px;*/
+	border: 1px solid #bebebe;
+}
+/*
+.artn-button button,
+.artn-button input,
+.artn-button a{
+    background: none;
+    text-decoration: none;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    box-sizing: content-box;
+    color: #666;  
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    
+}
+.artn-button a {
+	padding-top: 1px;
+}
+*/
+.artn-button.board		{ color: #339999; }
+.artn-button.search		{ background-image: url(images/gradient/button-search.1x100.png); }
+.artn-button.link		{ background-image: url(images/gradient/button-link.1x100.png); }
+.artn-button.rounded	{ background-image: url(images/gradient/button-round.1x100.png); }
+.artn-button.control	{ background-image: url(images/gradient/button-control.1x100.png); }
+.artn-button.flat		{ background-image: url(images/gradient/button-control.1x100.png); }
+
+.artn-button.board:hover, .artn-button.board:active		{ background-image: url(images/gradient/button-board-hover.1x100.png); cursor: pointer; }
+.artn-button.search:hover, .artn-button.search:active	{ background-image: url(images/gradient/button-search-hover.1x100.png); cursor: pointer; }
+.artn-button.link:hover, .artn-button.link:active		{ background-image: url(images/gradient/button-link-hover.1x100.png); cursor: pointer; }
+.artn-button.rounded:hover, .artn-button.rounded:active		{ background-image: url(images/gradient/button-round-hover.1x100.png); cursor: pointer; }
+.artn-button.control:hover, .artn-button.control:active	{ background-image: url(images/gradient/button-control-hover.1x100.png); cursor: pointer; }
+.artn-button.flat:hover, .artn-button.flat:active	{ background-image: url(images/gradient/button-control-hover.1x100.png); cursor: pointer; }
+
+.artn-button .artn-icon-pack { top: -6px; left: -3px; margin-right: -3px; }
+
+.artn-button.board,
+.artn-button.link{
+    -moz-box-shadow: 1px 1px 5px #e9e9e9;
+    -webkit-box-shadow: 1px 1px 5px #e9e9e9;
+    box-shadow: 1px 1px 5px #e9e9e9;
+}
+
+.artn-button.board{
+	/*
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;*/
+    border-radius: 3px 3px 3px 3px;
+    background-image: url(images/gradient/button-board.1x100.png);
+}
+.artn-button.search{
+    border: 0px;
+    padding: 0px 6px 1px 6px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius:5px 5px 5px 5px;
+    border-radius:5px 5px 5px 5px;
+}
+.artn-button.search input, .artn-button.search a { color: #ffffff; /*font-family: sans-serif;*/ font-size: 11px; }
+
+.artn-button.link,
+.artn-button.rounded { 
+	height: 22px; 	
+}
+
+.artn-button.rounded{
+	padding-bottom: 1px;
+    border-width: 2px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.artn-button.control{	
+	padding: 6px 5px;
+	border-color: #6fa53b;
+	
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-box-shadow:inset 0px 0px 3px #fff;
+    -webkit-box-shadow:inset 0px 0px 3px #fff;
+    box-shadow:inset 0px 0px 3px #fff;   
+}
+.artn-button.control/* input,
+.artn-button.control a*/{ 
+	color: #fff; 
+	text-shadow: 0px 1px 3px #000000;
+}
+.artn-button.flat/* input,
+.artn-button.flat a*/{ 
+	color: #fff; 
+	border-color: #649b2e;
+}
+
+.artn-button.link .file-ai,
+.artn-button.link .gallary,
+.artn-button.rounded .magnifier,
+..navigation-url .home{	
+	float: left;
+	margin-top: 8px;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+.artn-button.rounded .magnifier{
+	margin-top: 9px;
+	margin-right: 0px;
+}
+..navigation-url .home,
+..navigation-url .caret-thin-e{
+	margin-top: 7px;
+}
+/*========================================================= contents .header + .navigation url =========================================================*/
+
+.contents .header 				{ /* width: 100%; border-bottom: 3px solid #cccccc; padding-bottom: 10px; margin-bottom: 30px; */ /*margin-left: 200px;*/
+		width: 100%;
+		/*header 수정 2013-11-07*/
+		height: 53px;		
+		padding-top: 8px;		
+		/*header 수정 2013-11-07*/
+		/*header 수정 2013-11-07*/
+			/* border-bottom: 3px solid #cccccc;
+			padding-top: 30px;
+			padding-bottom: 10px; 
+			margin: 0 auto;
+			margin-bottom: 20px; */
+		/*header 수정 2013-11-07*/
+		/*margin-left: 200px; */		
+}
+
+/* 더이상 쓰이지 않으므로 삭제 함 - 2013.11.22 by jhson
+..navigation-url 				{ float: right; font-size: 12px; margin-top: 1em; }
+..navigation-url .artn-icon-pack, 
+..navigation-url a 				{ float: left; }
+..navigation-url a 				{ margin-top: 7px; }
+..navigation-url a:last-child	{ font-weight: bold; }
+*/
+
+/*========================================================= Contents Common =========================================================*/
+
+.distribute{
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+}
+.distribute li{
+	border: 1px solid #ccc;
+	display: table-cell;
+	text-align: center;
+}
+.distribute li a {
+	display: block;
+}
+.distribute.div3 li { width: 33.3%; }
+.distribute.div4 li { width: 25%; }
+.distribute.div5 li { width: 20%; }
+.distribute.div6 li { width: 16.5%; }
+.distribute.div7 li { width: 14.2%; }
+.distribute li:first-child{
+	width: 0;
+}
+
+.block-justify { text-align: justify; font-size: 0px; }
+.block-justify:before {content: " "; display: block; width: 100%; height: 0; margin-bottom: -1.2em;}
+.block-justify:after { content: " "; display: inline-block; width: 100%; height: 0;}
+.block-justify>li,
+.block-justify>div,
+.block-justify>a { display: inline-block; position: relative; top: 1.2em; }
+.artn-icon-hidden { visibility: hidden; }
+
+.icon-justify { text-align: left; padding: 5px; margin: 0 auto; }
+.icon-justify>a,
+.icon-justify>li { display: inline-block; margin: 5px;}
+.icon-justify>a, 
+.icon-justify>li { width: 64px; height: 64px; }
+/*========================================================= Contents Common =========================================================*/
+
+/*========================================================= Location Information Section =========================================================*/
+.subway.line1 	{ color: #0D3692; }
+.subway.line2 	{ color: #33A23D; }
+.subway.line3 	{ color: #FE5B10; }
+.subway.line4 	{ color: #32A1C8; }
+.subway.line5 	{ color: #8B50A4; }
+.subway.line6 	{ color: #C55C1D; }
+.subway.line7 	{ color: #54640D; }
+.subway.line8 	{ color: #F51361; }
+.subway.line9 	{ color: #AA9872; }
+.subway.line9-1	{ color: #02228B; } /* 서울시 메트로 9호선 */
+.subway.linek	{ color: #00AA80; } /* 경의선 */
+.subway.airport	{ color: #0095DA; }	/* 인천 공항 철도 */
+.subway.incheon	{ color: #3681B7; } /* 김포 공항 철도 */
+.subway.line1 mark 	{ background-color: #0D3692; }
+.subway.line2 mark 	{ background-color: #33A23D; }
+.subway.line3 mark 	{ background-color: #FE5B10; }
+.subway.line4 mark 	{ background-color: #32A1C8; }
+.subway.line5 mark 	{ background-color: #8B50A4; }
+.subway.line6 mark 	{ background-color: #C55C1D; }
+.subway.line7 mark 	{ background-color: #54640D; }
+.subway.line8 mark 	{ background-color: #F51361; }
+.subway.line9 mark 	{ background-color: #AA9872; }
+.subway.line9-1 mark	{ background-color: #02228B; } /* 서울시 메트로 9호선 */
+.subway.linek mark	{ background-color: #00AA80; } /* 경의선 */
+.subway.airport mark	{ background-color: #0095DA; }	/* 인천 공항 철도 */
+.subway.incheon mark	{ background-color: #3681B7; } /* 김포 공항 철도 */
+strong.subway mark	{ color: #ffffff; display: inline-block; width: 16px; height: 16px; border-radius: 4px; padding: 1px 1px 1px 0px; text-align: center; }
+strong.subway mark.resizable	{ width: auto; height: auto; padding: 1px 1px 1px 1px; }
+
+
+/*오시는 길 페이지*/
+	.location-info .address{		/*오시는 길 페이지*/
+		font-style: normal;
+		margin-top: 10px;
+		margin-bottom: 25px;
+		margin-left: 15px;
+		font-size: 14px; 
+	}
+	
+	.location-info .traffic1,		
+	.location-info .traffic2{
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	
+	.location-info .traffic1 li,	
+	.location-info .traffic2 li{ 
+		padding-left: 10px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+	.location-info .traffic1 li{  
+		padding-bottom: 10px;
+		border-bottom: 1px solid #CCCCCC;
+	}
+	.location-info .traffic1 li h6{	 
+		float: left;
+		margin-top: 2px;
+		width: 85px; 
+	}
+	.location-info .traffic1 li h6 span,	 
+	.location-info .traffic2 li h6 span{
+		float: left; 
+		margin-top: 0px;
+		margin-right: 5px;
+	}
+/*교통편 안내*/
+	.location-info .traffic1 li p{	 
+		/*display: inline-block;
+		margin-top: 0px;
+		margin-bottom: 0px;*/
+		display: block;
+		margin-top: 5px;
+		margin-bottom: 0px;
+		margin-left: 85px;
+		line-height: 20px;
+	}	
+/*교통편 안내*/
+
+	.location-info .traffic2 li p{	 
+		margin-left: 10px;
+		line-height: 20px;
+	}
+	.location-info .traffic1 li:last-of-type{
+		border: 0px;
+	}
+/*오시는 길 페이지*/
+/*========================================================= History Section =========================================================*/
+
+h2 em, h3 em, a em, p em 	{ color: #666; }
+.history h2		{ font-size: 20px; color: #33cccc/*#65812c*/; }
+.history h3		{ font-size: 24px; color: #8cdce5; }
+.history li		{ font-size: 14px; color: #666666; }
+
+
+/*연혁 페이지*/ 
+.history>div{	/*연혁 페이지*/
+	float: left;
+	margin-right: 20px;
+	padding-right: 15px;
+	height: 140px;
+	border-right: 1px solid #ccc;
+}
+.history div+div,
+.history div h3{	 
+	float: left;
+}
+.history div+div{
+	margin-right: 0px;
+	border-right: 0;
+	height: 100%;
+}
+.history div h3{
+	clear: both;		
+}
+.history div ol{
+	float: left;
+	margin-top: 3px;		
+	margin-bottom: 20px;
+	margin-left: 15px;
+	
+	width: 459px;
+}	 
+.history div ol li{
+	margin-bottom: 5px;
+}
+/*연혁 페이지*/
+
+
+
+
+/*========================================================= Common Exceptions [begin] =========================================================*/
+.icon-list li:not(:first-child) 		{ margin-top: -5px;}
+.icon-list li .artn-icon-pack+span { font-size: 14px; color: #333333; position: relative; top: 0px; left: 0px; }
+.graybg { display: inline-block; width: 128px; height: 83px; background-color:#cccccc; border-radius: 10px; text-align: center; }
+.graybg .artn-icon-96 { margin-top: -7px; }
+
+.icon-list .artn-icon-pack {vertical-align: middle; }
+
+/*yyj 회원가입 valid-msg*/
+.valid-msg{
+	color: red;
+}
+/*========================================================= Common Exceptions [end] =========================================================*/
+
+
+/*========================================================= media query section [begin] =========================================================*/
+@media all and (min-width:1024px) {
+	.contents-wrap{ width: 1024px; display: table; }
+	.icon-justify { width: 95%; }
+	.m-gnb { visibility: hidden; z-index: -110; }
+}
+@media all and (max-width:1023px) {
+	#breadcrumbs { display: none; }
+	.contents .header h1 { width: 100%; text-align: center; }
+	.m-gnb { visibility: visible; z-index: 110; }
+	
+	.footer-button.m-show { display: table; width: 100%; position: fixed; bottom: 0; left: 0; background-color: #fff; border-top: 2px solid #888; border-spacing: 0.3em; z-index: 100; }
+	.footer-button a { display: table-cell;}
+	.footer-button a:hover { text-decoration: none; }
+	.footer-button a.m-action-icon { position: relative; }
+	
+	.footer-button a.top { border: 1px solid #888; }
+	.footer-button a.top strong:before { content: '^'; display: block; vertical-align: bottom; margin-top: 1em; margin-bottom: -0.5em; font-size: 0.8em; }
+	.footer-button a.top strong { display: block; }
+}
+@media all and (max-width:640px) {
+
+}
+
+/*
+@media all and (min-width:1023px) {
+	.icon-justify { width: 975px; }
+}
+@media all and (max-width:1023px) {
+	.icon-justify { width: 770px; }
+}
+@media all and (max-width:800px) {
+	.icon-justify { width: 605px; }
+}
+@media all and (max-width:640px) {
+	.icon-justify { width: 531px; }
+}
+@media all and (max-width:578px) {
+	.icon-justify { width: 461px; }
+}
+@media all and (max-width:512px) {
+	.icon-justify { width: 390px; }
+}
+@media all and (max-width:400px) {
+	.icon-justify { width: 309px; }
+}
+@media all and (max-width:320px) {
+	.icon-justify { width: 235px; }
+}*/
+/*========================================================= media query section [end] =========================================================*/
+
+/*========================================================= loading overlay [begin] =========================================================*/
+.artn-loading-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	top: 0px;
+	left: 0px;
+}
+.artn-loading-overlay .artn-loading-img{
+	display: inline-block;
+	position: absolute;
+	width: 66px;
+	height: 66px;
+	background-image: url("/css/jglovis/images/loading/loading17.gif");
+	top: 50%;
+	left: 50%;
+	margin-top: -33px;
+	margin-left: -33px;
+}
+/*========================================================= loading overlay [end] =========================================================*/

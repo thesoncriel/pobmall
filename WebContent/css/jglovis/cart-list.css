@@ -1,0 +1,258 @@
+.article.cart-list h1{
+	margin-bottom: 5px;
+	font-family: "malgunGothic";
+	color: #777;
+	font-size: 17px;
+}
+.article.cart-list .total_price{
+	text-align: right;
+	font-size: 18px;
+	padding: 10px 20px 15px 0px;
+	font-weight: bold;		
+}
+.article.cart-list .partial-info tr{
+	height: 44px;
+}
+.article.cart-list .partial-info th{
+	width: 130px;
+	font-family: "malgunGothic";
+	font-size: 13px;
+	color: #777;
+}
+.article.cart-list .partial-info td{
+	padding-left: 20px;
+	padding-right: 19px;
+	width: 87%;
+}
+.article.cart-list .total_price .price{
+	font-size: 28px;
+	color: #339999;	
+}
+
+.article.cart-list .total_price sub{
+	font-size: 18px;
+	vertical-align: middle;
+	color: #666;
+}
+
+.article .partial-info {
+	width: 48%;
+	display: inline-block;	
+	vertical-align: top;	
+}
+.article.cart-list .partial-info.full {
+	width: 100%;
+	vertical-align: top;
+}
+.article.cart-list{
+	display: inline-block;
+	margin: 20px 0px 20px 0px;
+	width: 100%;
+}
+
+.article .partial-info h1{
+	display: inline-block;
+}
+.article.cart-list .partial-info.left {
+	float:left;
+}
+
+.article.cart-list .partial-info.right {
+	float: right;
+}
+
+.article.cart-list table tbody.row-scope th{
+	background-color: #f8f8f8;
+}
+.article.cart-list table tfoot{
+	background-color: #f8f8f8;
+	font-family: "malgunGothic";	
+}
+
+.article.cart-list table tfoot td{
+	text-align: right;
+}
+
+.article.cart-list table tfoot td div span{
+	color: #ff893b;	
+}
+
+.article.cart-list table tfoot td div span sub{
+	color: #666;
+}
+.article.cart-list table tfoot td .total_price span{
+	vertical-align: sub;
+}
+.article.cart-list table tfoot td .product_price,
+.article.cart-list table tfoot td .delivery_price,
+.article.cart-list table tfoot td .total_price{
+	display: inline-block;
+	font-weight: bold;
+}
+.article.cart-list table tfoot td .plus,
+.article.cart-list table tfoot td .equals{
+	font-size: 17pt;
+	font-weight: bold;
+	margin-right: 7px;	
+}
+
+.article.cart-list table tfoot td .delivery_price,
+.article.cart-list table tfoot td .product_price{
+	font-size: 13pt;
+	margin-right: 7px;
+}
+
+.article.cart-list table tfoot td .delivery_price span,
+.article.cart-list table tfoot td .product_price span{
+	font-size: 15pt;
+}
+
+.article.cart-list table tfoot td .delivery_price span sub,
+.article.cart-list table tfoot td .product_price span sub{
+	vertical-align: middle;
+}
+
+.article div.payment{
+	clear: both;	
+	border: 1px solid #ccc;
+	margin-bottom: 50px;
+}
+.article div.payment .tab{
+	background-color: #f2f2f2;
+	/* margin-bottom: 10px; */
+	border: 1px solid #d1d1d1;
+}
+.article div.payment .tab li{
+	height: 35px;	
+}
+/* .article div.payment .tab li.last{
+	float: none;
+	border: 0px;
+}
+ */
+.article div.payment .tab li a:hover,
+.article div.payment .tab li a.selected{
+	background: #ccc;
+	color: #fff;
+}
+.article div.payment .tab li a{
+	display: block;
+	line-height: 35px;
+	height: 35px;
+	font-size: 15px;
+	text-decoration: none;
+	color: #666;
+}
+.article div.payment .content{
+	padding: 15px 0px 15px 30px;
+}
+
+.article div.payment .content p{
+	font-size: 14px;
+	font-family: "돋움";
+	color: #666;
+	margin-bottom: 15px;
+	margin-top: 0px;
+}
+.article div.payment .content form{
+	text-align: center;
+}
+
+.article div.payment .content button .ui-button-text{
+	font-size: 14px;
+	background-color: #ff6600;
+	color: #fff;
+}
+.article div.payment .content a .ui-button-text{
+	background-color: #eaeaea;
+	color: #667;
+	font-size: 14px;
+}
+
+.article.cart-list .partial-info.right .payment-show th{
+    width : 20%;
+}
+
+.article.cart-list .partial-info.right .payment-show td{
+    width : 80%;
+}
+
+/* payment css 2013.11.29 by.thkim[시작]*/
+.article #update_frm .board-list .pay-free.free{
+	color: blue;
+}
+.article #update_frm .board-list .pay-free.pay{
+	color: red;
+}
+.payment-list #list_purchase .col-subject .artn-icon-16.circle-caret-2-s {
+	vertical-align: middle;
+}
+/* payment css 2013.11.29 by.thkim[종료]*/
+
+
+/* 데스크탑용 항목 너비 설정 - 2013.12.03 by jhson [시작] */
+.col-id,
+.col-img,
+.col-price,
+.col-opt-price,
+.col-count,
+.col-price-sum,
+.col-etc { width: 85px; }
+.col-name, .col-opt { width: 110px; }
+/* 데스크탑용 항목 너비 설정 - 2013.12.03 by jhson [종료] */
+
+@media all and (max-width: 1023px){
+	/* cart list - 모바일용 레이아웃 추가 - 2013.12.03 by jhson [시작] */
+	.cart-list table.m-list .col-id,
+	.cart-list table.m-list .col-name,
+	.cart-list table.m-list .col-opt { left: 0px; text-align: left; width: 65%; padding-left: 10px; }
+	
+	.cart-list .col-name { top: 1em; font-size: 1.2em; font-weight: bold; }
+	.cart-list .col-opt { top: 2.5em; font-size: 1.2em; }
+	
+	.cart-list table.m-list .col-price,
+	.cart-list table.m-list .col-opt-price,
+	.cart-list table.m-list .col-count,
+	.cart-list table.m-list .col-price-sum,
+	.cart-list table.m-list .col-etc { right: 10%; text-align: center; width: 20%; border-left: 1px solid #ccc; }
+	
+	.cart-list table.m-list .col-etc { right: 0px; top: 1em; width: 10%; height: 60px; }
+	.cart-list table.m-list .delete { position: absolute; top: 50%; margin-top: -16px; right: 50%; margin-right: -16px; background-image: url("images/artn-icons.png"); background-position: -128px -255px; width: 32px; height: 32px; text-indent: -65000px; display: inline-block; background-color: #fff; border-width: 0px; }
+	
+	.cart-list table.m-list .col-price-sum { height: 60px; z-index: -1; }
+	
+	.cart-list .col-price-sum { top: 1em; }
+	.cart-list .col-count { top: 2.5em; }
+	.cart-list .col-etc { top: 4.5em; }
+	
+	.article .partial-info { width: 100%; }
+	/* cart list - 모바일용 레이아웃 추가 - 2013.12.03 by jhson [종료] */
+	
+	/* payment list - 모바일용 레이아웃 추가 - 2013.12.03 by jhson [시작] */
+	.payment-list table.m-list { font-size: 1.2em; }
+	.payment-list table.m-list tbody tr { height: 80px; }
+	.payment-list table.m-list .col-date,
+	.payment-list table.m-list .col-id,
+	.payment-list table.m-list .col-user,
+	.payment-list table.m-list .col-subject { left: 0; text-align: left; width: 65%; padding-left: 10px; }
+	
+	.payment-list table.m-list .col-date { top: 1em; color: #00f; width: 10em; }
+	.payment-list table.m-list .col-id { top: 1em; left: 9em; width: 60%; font-weight: bold; color: #444; }
+	.payment-list table.m-list .col-subject { top: 2.2em; font-weight: bold;}
+	.payment-list table.m-list .col-user { top: 3.6em; }
+	
+	.payment-list table.m-list .col-amount,
+	.payment-list table.m-list .col-count { right: 0; text-align: center; width: 35%; border-left: 1px solid #ccc; }
+	
+	.payment-list table.m-list .col-amount { top: 1em; }
+	.payment-list table.m-list .col-count { top: 2em; }
+	.payment-list table.m-list .col-count:before { content: '('; }
+	.payment-list table.m-list .col-count:after { content: ')'; }
+	
+	.payment-list table.m-list .col-subject-sub { top: 1em; padding-left: 10px; }
+	.payment-list table.m-list .col-price { top: 3.6em; }
+	.payment-list table.m-list .col-buttons { top: 2em; right: 0; }
+	
+	.payment-list table.m-list .item-sub { border-top: 1px dashed #ccc; }
+	/* payment list - 모바일용 레이아웃 추가 - 2013.12.03 by jhson [종료] */
+}

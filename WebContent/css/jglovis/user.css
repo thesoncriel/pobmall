@@ -1,0 +1,342 @@
+/*로그인 페이지 시작*/
+.artn-login{
+	/* width: 100%; */
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 40px;
+}
+.artn-login h2.logo{
+	width: 412px;
+	height: 81px;
+	text-indent: -66535px;
+	background: url("images/biz-logo_login.png") no-repeat;
+}
+.artn-login .body,
+.user-password .body
+{
+	padding-top: 36px;
+	padding-bottom: 20px;
+	text-align: center;
+	
+	border-top: 2px solid #ff6633;
+	border-left: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	background-color: #f9f9f9;
+	
+	width: 410px;
+	display: inline-block;
+}
+.user-password .body
+{
+	margin-top:30px;
+	margin-bottom:50px;
+	padding-top:20px;
+}
+.artn-login .inner,
+.user-password .inner{
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+}
+.artn-login .inner ul{
+	width: 220px;
+	display: block;
+}
+.artn-login .inner input#textbox_id,
+.artn-login .inner input#textbox_pw{
+	width: 99%;
+	height: 17px;
+	margin-bottom: 5px;
+}
+.artn-button.login{
+	cursor: pointer;
+	cursor: hand;		
+/* 	width: 72px;
+	height: 52px;
+ */	margin: 0px;
+	text-align: center;
+	font-weight: bold;		
+	font-size: 13px;
+	color: white;	
+	
+	-moz-box-shadow:inset 0px 0px 3px #fff;
+    -webkit-box-shadow:inset 0px 0px 3px #fff;
+    box-shadow:inset 0px 0px 3px #fff;	    
+    
+    border: 1px solid #727272;
+    background: #7d7d7d;
+    background: -moz-linear-gradient(top, #7d7d7d 0%, #3a3a3a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7d7d), color-stop(100%,#3a3a3a));
+    background: -webkit-linear-gradient(top, #7d7d7d 0%,#3a3a3a 100%);
+    background: -o-linear-gradient(top, #7d7d7d 0%,#3a3a3a 100%);
+    background: -ms-linear-gradient(top, #7d7d7d 0%,#3a3a3a 100%);
+    background: linear-gradient(to bottom, #7d7d7d 0%,#3a3a3a 100%);
+    
+    display: inline-block;	    
+}
+.artn-login button[type='submit']{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.artn-login .error{
+	text-align: left;
+}
+.artn-login .error .alert{
+	vertical-align: middle;
+}
+.artn-login .options{
+	margin-top: 0.5em;
+	text-align: left;
+}
+
+/*로그인 페이지 종료*/
+
+
+/*로그인 후 메뉴 페이지 시작*/
+/*새로운 메뉴 */
+.section .article .nav div{
+	margin-left: 0px;			
+	background: url(images/bg-1_03.png) no-repeat 80px 18px;
+}
+.section .article .nav div dl{
+	display: inline-table;
+	margin-right: -4px;
+	margin-bottom: 30px;		
+}
+
+.section .article .nav dl dt{
+	background: url(images/bizbgpack/heal365-bg-edge/heal365-bg-edge4-on.png) no-repeat;
+	background-position: 96px 0px;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-left: 5px;
+	display: block;
+	width: 110px;
+	height: 17px;
+	background-color: #dedede;
+	margin-bottom: 10px;
+	/*font-family: 'NanumGothicBold' sans-serif;*/
+}
+
+.section .article .nav dl dd{
+	background-color:#999999;	
+	border: 1px solid #ccc;		
+	float: left;
+	margin-right: 15px;
+}
+
+.section .article .nav dl dd a{
+	color: #ffffff;
+	display: inline-block;
+	width: 115px;
+	height: 120px;			
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+}
+.section .article .nav dl dd a:hover{
+	background-color: #33cccc;
+}
+
+.section .article .nav div dl dd a.button_Workout span{			
+	background-position: -565px -62px;		
+}
+
+.section .article .nav div dl dd a.button_Workout span{			
+	background-position: -375px -62px;		
+}	
+
+.section .article .nav div dl dd a span{
+	background: url(/img/contents/bizicon/heal365-bg-pack.png) no-repeat;
+	display: block;
+	width: 80px;
+	height: 74px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid white;
+	margin-left: 17px;
+}
+
+.section .article .nav div dl dd a.button_CureAndExcercise span{			
+	background-position: 7px -62px;		
+}
+.section .article .nav div dl dd a.button_Routine span{			
+	background-position: -183px -62px;		
+}
+
+.section .article .nav div dl dd a.button_MyScription span{			
+	background-position: -1335px -62px;			
+}
+
+.section .article .nav div dl dd a.button_movie span{			
+	background-position: -759px -62px;		
+}
+.section .article .nav div dl dd a.button_mix span{			
+	background-position: -950px -62px;		
+}
+.section .article .nav div dl dd a.button_365plus span{			
+	background-position: -1144px -62px;		
+}
+
+
+
+
+
+
+
+
+
+.section .article .nav div:nth-child(3) dl dd{
+	float: left;
+	margin-right: 15px;
+}
+	
+/*새로운 메뉴 */
+
+/*로그인 후 메뉴 페이지 종료*/
+
+
+
+
+/*비회원 구매리스트 화면*/
+.contents .artn-login+.validator{
+	border: 1px solid #e7e7e7;
+	width: 350px;
+	margin: 0 auto;
+	padding: 30px;
+	
+	position: relative;
+	top: 10px;
+	background-color: #f9f9f9;
+}
+
+.contents .artn-login+.validator>div{
+	width: 300px;
+	margin: 0 auto;
+}
+
+.contents .artn-login+.validator div div{
+	margin-top: 10px;
+}
+.contents .artn-login+.validator div+div select{
+	margin-right: 5px;
+}
+.contents .artn-login+.validator div+div input[type="text"]{
+	width: 70px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.contents .artn-login+.validator .footer{
+	margin: 0 auto;
+	width: 54px;
+}
+/*비회원 구매리스트 화면*/
+
+/*비회원 카트가기전 로그인 화면*/
+.artn-login div{
+	vertical-align: top;
+}
+.cart-inner{
+	height: 40px;
+}
+.cartbody{
+	padding-top: 10px;
+	margin-left: -3px;
+}
+.cartbody .body{
+	border-top: 1px solid #e7e7e7;
+	padding: 0px;
+	padding-top: 10px;
+	margin-bottom: 0px;
+}
+.artn-login button .ui-button-text{
+	font-size: 12px;
+	background-color: #ff6600;
+	color: #fff;
+}
+.artn-login:first-child button .ui-button-text{
+	line-height: 40px;	
+}
+.cart-inner button{
+
+}
+.cart-guest{
+	text-align: left;
+	padding-top: 5px;
+}
+.guest-body{
+	padding-top: 10px;
+}
+.guest-body .body{
+	border-top: 1px solid #e7e7e7;
+	padding: 0px;
+	padding-top: 10px;
+	margin-bottom: 0px;
+	margin-left: -3px;
+	text-align: left;
+	height: 120px;
+}
+.guest-list span input{
+	width: 43px;
+}
+.guest-list button{
+	margin-top: 50px;
+}
+.guest-pay{
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.user-password .inner .user-update
+{
+	font-family: "맑은 고딕","Malgun Gothic";
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+.user-password .inner p
+{
+	font-family: "돋움",Dotum;
+	text-align: center;
+    font-size: 13px;
+}
+.user-password .inner .footer
+{
+	font-size:13px;
+	text-align: left;
+	font-weight: bold;
+	margin-top: 15px;
+}
+.user-password .inner .footer div
+{
+	margin-bottom: 7px;
+	display : inline-block;
+	width: 70px;
+}
+.user-password .inner .footer button
+{
+	height: 25px;
+    font-size: 12px;
+    color : #fff;
+    background-color: #ff893b;
+    background-image: none;
+}
+.member-join h3 em
+{
+	color: #8cdce5;
+
+}
+
+/* 모바일용 레이아웃 추가 - 2013.12.02 by jhson [시작] */
+@media all and (max-width: 640px){
+	.artn-login .body { width: 100%;  }
+}
+
+/* 모바일용 레이아웃 추가 - 2013.12.02 by jhson [종료] */

@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*.footer*/
+	
+	
+	#footer{
+/**********************이정훈 10-25***********************/
+		border-top:1px solid #d2d2d2;
+		overflow: hidden; 
+		padding-bottom: 30px;
+		width: 100%;
+		background-color: #f7f7f7;	
+		margin-top: 30px;	
+/**********************이정훈 10-25***********************/
+	}	
+	
+	#footer>div{              
+/**********************이정훈 10-25***********************/
+		/* width: 870px;
+		height: 300px;
+		margin: 0 auto;
+		padding-top: 40px; */
+		width: 990px;
+		height: 300px;
+		margin: 0 auto;
+		padding-top: 40px; 
+		background-image: url("/img/jglovis/main/Untitled-4.png");		
+		background-position: 50% 4%;
+/**********************이정훈 10-25***********************/
+	}
+   
+   #footer .column-products,
+   #footer .column,
+   #footer .column-company{
+   		/* height: 468px; */
+   		float: left;
+   		margin-left: 0px;
+   }
+   
+   #footer .column-products{
+   		width: 255px;
+   }
+   
+
+   #footer .column{
+   		width: 310px;
+   }
+   
+   #footer .column .explore{
+   		display: inline-block;
+		margin-left: 45px;
+		width: 356px;
+   }
+   
+   #footer .column .explore div,
+   #footer .column .devicehelp div{
+   		float: left;
+   }
+   
+   #footer .column .explore ul{   		
+		float: left;
+		width: 178px;
+   }
+   
+   
+   #footer .column .devicehelp{
+   		display: inline-block;
+   		margin-top: 66px;
+   		margin-left: 34px;
+		width: 356px;
+   }
+   
+   #footer .column .devicehelp ul{
+   		
+		float: left;
+		width: 178px;
+   }
+   
+   #footer .column ul li{
+   		margin-bottom: 10px;
+   }
+   
+   #footer .column-company{
+   		width: 260px; 
+/**********************이정훈 10-25***********************/
+   		/* margin-left: 45px; */
+   		margin-left: 110px;
+/**********************이정훈 10-25***********************/
+	}
+   
+   #footer .column-company .devicehelp{
+   		
+   		display: inline-block;
+   }
+   
+   #footer .column-company .devicehelp h1{
+   		margin-right: 90px;
+		display: inline;
+		float: left;	
+   }
+
+	#footer .column-company .devicehelp h1 a{
+		width: 193px;
+		height: 47px;
+		
+		float: left;
+		text-indent: -65535px;
+		background-image: url("../../img/jglovis/main/footer_jglovis_logo.png");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		font-size: 0px;
+		background-size: 193px 47px;
+	}
+   
+   #footer .column-company .devicehelp>ul{
+   		margin-top: 20px;
+   		margin-left: 10px;
+   		font-size: 16px;
+   }
+   
+   #footer .column-company .devicehelp ul li{
+   		float: left;
+   		margin-right: 20px;
+   }
+   
+   #footer .column-company .devicehelp p{
+   		
+		display: inline-block;
+		margin-top: 30px;
+		margin-left: 10px;
+   }
+   
+   #footer .column-company .devicehelp div{
+   		margin-top: 80px;
+   		margin-left: 10px;
+   		display: inline-block;
+   }
+   
+   #footer .column-company .devicehelp div small{
+   		display: block;
+   		margin-top: 20px;
+   		margin-bottom: 10px;
+   }
+   
+   #footer .column-products ul{
+   		margin-top: 16px;
+   }
+   #footer .column-products ul li{
+		border-bottom: 1px solid #d9d9d9;
+		margin-bottom: 22px;
+		padding-bottom: 10px;
+   }
+   
+   #footer .column-products ul li a .info{
+   		height: 40px;
+		display: inline-table;
+   }
+   
+   #footer .column-products ul li a .product_img{
+   		background-position: 0px 45px;
+   		width: 26px;
+		height: 45px;
+		float: left;
+		margin-right: 10px;
+   }
+   
+   #footer .column-products ul li a .product_img.force{
+   		background-image: url("/img/jglovis/main/som3.png");   		
+   }
+   
+   #footer .column-products ul li a .product_img.flex{
+   		background-image: url("/img/jglovis/main/som2.png");
+   }
+   
+   #footer .column-products ul li a .product_img.zip{
+   		background-position: 0 0px;
+   }
+   
+   #footer .column-products ul li a .product_img.one{
+   		background-position: 7px -50px;
+   }
+   
+   #footer .column-products ul li a .product_img.aria{
+   		background-position: 0 -100px;
+   }
+   
+   #footer .column-products .explore a.shop{
+	    
+	    margin-left: 5px;
+		display: inline-block;
+   }
+   
+   #footer .column-products .explore a.shop .bl1{
+   		
+   		width: 6px;
+   		height: 7px;
+		background-image: url("/img/jglovis/main/bl1.png");
+		display: inherit;
+		margin-left: 16px;   		
+   }
+   
+   #footer .column-products .explore a.shop,
+   .column-company .devicehelp ul li a{
+	    color: #0096af;
+   }
+   
+   #footer .column-products .explore{
+   		padding-left: 2em;
+   }
+/*.footer*/

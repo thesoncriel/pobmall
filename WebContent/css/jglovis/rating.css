@@ -1,0 +1,42 @@
+.rating_radio{
+    /* visibility: hidden; */
+    display : none;
+}
+.rating_img, .rating_show_bg, .rating_show_fg{
+	background-image : url("images/artn-icon_star.gif");
+}
+.rating_img{
+    width: 15px;
+    height: 15px;
+    text-indent: -10000px;
+    background-repeat: no-repeat;
+    position: relative;
+    display:inline-block;
+}
+.rating_img.half_checked{
+width: 15px;
+background-position: 0px -48px;
+}
+.rating_img.checked{
+width: 15px;
+/* font-size: 20px; */
+background-position: 0px -32px;
+}
+.rating_img.select{
+width: 15px;
+/* font-size: 20px; */
+background-position: 0px -16px;
+}
+
+.rating_show_bg{
+	display : inline-block;
+	width: 80px;
+	height: 15px;
+    position: relative;
+    text-align: left;
+}
+.rating_show_fg{
+	position : absolute;
+    height: 15px;
+    background-position: 0px -32px;
+}

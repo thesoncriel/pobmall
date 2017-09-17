@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="artn-common" namespace="/" extends="struts-default">
+    	<result-types>
+    		<result-type name="chart" class="org.apache.struts2.dispatcher.ChartResult"/>
+    	</result-types>
+    	<global-results>
+    		<!-- <result name="exception">/error/404.jsp</result> -->
+    		<result name="error" type="redirect">/error/404.jsp</result>
+    		<result name="error_auth" type="redirect">/common/error_auth.jsp</result>
+    		<result name="login" type="redirect">/user/login</result>
+    		<result name="login_cart" type="redirect">/user/login?cart=true</result>
+    		<result name="login_myposts" type="redirect">/user/login?myposts=true</result>
+    		<result name="main" type="redirect">/</result>
+    		<result name="index" type="redirect">/</result>
+    		<result name="menu" type="redirect">/user/menu</result>
+    		<result name="join" type="redirect">/user/join</result>
+    		<result name="gotoback" type="redirect">/main?url=${header.referer }</result>
+    		<result name="before_request" type="redirect" >${session.beforeRequest }</result>
+    		<result name="jsonshow" type="stream">
+    			<param name="inputName">jsonShowStream</param>
+    			<param name="contentType">text/plain;charset=UTF-8</param>
+    		</result>
+    		<result name="jsonlist" type="stream">
+    			<param name="inputName">jsonListStream</param>
+    			<param name="contentType">text/plain;charset=UTF-8</param>
+    			<!-- <param name="contentDisposition">attachment;filename=test.json</param> -->
+    		</result>
+    		<result name="text_response" type="stream">
+    			<param name="inputName">responseStream</param>
+    			<param name="contentType">text/html;charset=UTF-8</param>
+    		</result>
+    	</global-results>
+		
+	<!-- 	<global-exception-mappings>
+			<exception-mapping result="exception" exception="java.lang.Exception"/> 
+		</global-exception-mappings> -->
+		
+    	<action name="download" class="artn.common.controller.FileAction">
+    		<result name="success">/WEB-INF/view/_common/stream.jsp</result>
+    		<!-- <result name="success" type="stream">    			
+    			<param name="inputName">fileInputStream</param>
+    			<param name="contentDisposition">attachment;filename=${params.fileName}</param>
+    			<param name="bufferSize">4096</param>
+    		</result>
+    		 -->
+	    </action>
+	    <action name="exceldown" class="artn.common.controller.FileAction" method="exceldown">
+    		<result name="success" type="stream">    			
+    			<param name="inputName">fileInputStream</param>
+    			<param name="contentDisposition">attachment;filename=${params.fileName}</param>
+    			<param name="bufferSize">4096</param>
+    		</result>
+	    </action>
+	    <action name="ajaxUpload" class="artn.common.controller.FileAction" method="upload">
+           <result type="stream">
+    			<param name="inputName">resultInputStream</param>
+    			<param name="contentType">text/html;charset=UTF-8</param>
+    		</result> 
+        </action>
+        <action name="ajaxImageUpload" class="artn.common.controller.FileAction" method="uploadImage">
+           <result type="stream">
+    			<param name="inputName">resultInputStream</param>
+    			<param name="contentType">text/html;charset=UTF-8</param>
+    		</result>
+        </action>
+        <action name="contents" class="artn.common.controller.DefaultAction">
+           <result>/WEB-INF/view/_common/contents.jsp</result> 
+        </action>
+        <action name="mapcoord" class="artn.common.controller.DefaultAction">
+           <result>/WEB-INF/view/_common/map_autocomplate.jsp</result> 
+        </action>
+        <action name="zipcode" class="artn.common.controller.DefaultAction">
+           <result>/WEB-INF/view/_common/zipcode.jsp</result> 
+        </action>
+        
+    </package>
+
+<!--     <package name="default" namespace="/" extends="struts-default">
+    	
+    </package> -->
+    
+    <package name="default" extends="artn-common">
+    	
+    
+    	<action name="login">
+    		<result type="redirect">/user/login</result>
+    	</action>
+    	<action name="logout">
+    		<result type="redirect">/user/logout</result>
+    	</action>
+    	<action name="menu">
+    		<result type="redirect">/user/menu</result>
+    	</action>
+    	<action name="join">
+    		<result type="redirect">/user/join</result>
+    	</action>
+    	<action name="main" class="artn.common.controller.MainAction">
+            <result>/main.jsp</result>
+        </action>
+        <action name="admin" class="artn.common.controller.DefaultAction">
+           <result type="redirect">/admin/main</result> 
+        </action>
+    </package>
+    
+    <package name="install" namespace="/install" extends="artn-common">
+    	<action name="create" class="artn.common.controller.InstallAction" method="create">
+    		<result type="redirect">/WEB-INF/install/create.jsp</result>
+    	</action>
+    	<action name="update" class="artn.common.controller.InstallAction" method="update">
+    		<result type="redirect">/WEB-INF/install/update.jsp</result>
+    	</action>
+    </package>
+    
+    <package name="user" namespace="/user" extends="artn-common">
+    	<interceptors>
+    		<interceptor name="userCheck" class="artn.common.interceptor.AuthUserInterceptor"></interceptor>
+    		<interceptor-stack name="userCheckStack">
+    			<interceptor-ref name="userCheck"></interceptor-ref>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<default-interceptor-ref name="userCheckStack"></default-interceptor-ref>
+    	
+    	<action name="login" class="artn.common.controller.UserAction" method="login">
+            <result name="login">/WEB-INF/view/user/login.jsp</result>
+            <result name="getting_ip" type="chain">getting_ip</result>
+        </action>
+        <action name="getting_ip" class="artn.common.controller.UserAction">
+            <result>/WEB-INF/view/user/getting_ip.jsp</result>
+        </action>
+        <action name="loginbysession" class="artn.common.controller.UserAction" method="loginBySession">
+        </action>
+        <action name="logout" class="artn.common.controller.UserAction" method="logout">
+        </action>
+        <action name="mypage" class="artn.common.controller.UserAction" method="myPage">
+        	<result>/WEB-INF/view/user/mypage.jsp</result>
+        	<result name="mini">/WEB-INF/view/user/mypage-mini.jsp</result>
+        </action>
+        <action name="menu" class="artn.common.controller.UserAction" method="menu">
+        	<result>/WEB-INF/view/user/menu.jsp</result>
+        </action>
+        
+        <action name="join" class="artn.common.controller.UserAction" method="join">
+        	<result name="step1">/WEB-INF/view/join/step1.jsp</result>
+        	<result name="step2">/WEB-INF/view/join/step2.jsp</result>
+        	<result name="step3">/WEB-INF/view/join/step3.jsp</result>
+        	<result name="finish">/WEB-INF/view/join/finish.jsp</result>
+        </action>
+        <action name="checkid" class="artn.common.controller.UserAction" method="checkId">
+            <result>/WEB-INF/view/user/show.jsp</result>
+        </action>
+
+        <action name="list" class="artn.common.controller.UserAction" method="list">
+            <result>/WEB-INF/view/user/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.UserAction" method="show">
+            <result>/WEB-INF/view/user/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.UserAction" method="edit">
+            <result>/WEB-INF/view/user/edit.jsp</result>
+            <result name="password">/WEB-INF/view/user/password.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.UserAction" method="write">
+            <result>/WEB-INF/view/user/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.UserAction" method="modify">
+        	<result name="error">/WEB-INF/view/user/edit.jsp</result>
+            <result type="redirect">show?id=${id}</result>
+            <result name="groupList" type="redirect">/groupuser/write</result>
+        </action>
+        <action name="delete" class="artn.common.controller.UserAction" method="delete">
+            <result type="redirect">list?contents=adm1000_1</result>
+        </action>
+        <action name="leave" class="artn.common.controller.UserAction" method="leave">
+            <result>/WEB-INF/view/user/delete.jsp</result>
+        </action>
+        <action name="memberConfirm" class="artn.common.controller.UserAction" method="memberConfirm">
+        </action>
+        <action name="find" class="artn.common.controller.UserAction" method="find">
+            <result name="find">/WEB-INF/view/user/id_find.jsp</result>
+        </action>
+        <action name="pwupdate" class="artn.common.controller.UserAction" method="passwdUpdate">
+            <result type="redirect">/main</result>
+        </action>
+        <action name="findid" class="artn.common.controller.UserAction" method="findId">
+            <result name="find">/WEB-INF/view/user/id_find.jsp</result>
+        </action>
+        <action name="findpassword" class="artn.common.controller.UserAction" method="findPassword">
+            <result name="find">/WEB-INF/view/user/id_find.jsp</result>
+        </action>
+    </package>
+    
+    <package name="group" namespace="/group" extends="artn-common">
+    	<interceptors>
+    		<interceptor name="loginCheck" class="artn.common.interceptor.AuthLoginInterceptor"></interceptor>
+    		<interceptor-stack name="loginCheckStack">
+    			<interceptor-ref name="loginCheck"></interceptor-ref>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<default-interceptor-ref name="loginCheckStack"></default-interceptor-ref>
+    
+        <action name="list" class="artn.common.controller.GroupAction" method="list">
+            <result>/WEB-INF/view/group/list.jsp</result>
+            <result name="admin">/WEB-INF/view/group/listadmin.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.GroupAction" method="show">
+            <result>/WEB-INF/view/group/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.GroupAction" method="edit">
+            <result>/WEB-INF/view/group/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.GroupAction" method="write">
+            <result>/WEB-INF/view/group/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.GroupAction" method="modify">
+            <result type="redirect">show?id=${id}</result>
+            <result name="modifyForNew" type="chain">modifyForNewAuth</result>
+        </action>
+        <action name="modifyForNewAuth" class="artn.common.controller.UserAuthAction" method="modify">
+            <result type="chain">modifyForNewAdmin</result>
+        </action>
+        <action name="modifyForNewAdmin" class="artn.common.controller.GroupUserAction" method="modify">
+            <result name="list" type="chain">finish</result>
+        </action>
+        <action name="finish" class="artn.common.controller.GroupAction">
+            <result>/WEB-INF/view/group/finish.jsp</result>
+        </action>
+        <action name="delete" class="artn.common.controller.GroupAction" method="delete">
+            <result type="redirect">list</result>
+        </action>
+    </package>
+    
+    <package name="groupuser" namespace="/groupuser" extends="artn-common">
+        <action name="list" class="artn.common.controller.GroupUserAction" method="list">
+            <result>/WEB-INF/view/groupuser/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.GroupUserAction" method="show">
+            <result>/WEB-INF/view/groupuser/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.GroupUserAction" method="edit">
+            <result>/WEB-INF/view/groupuser/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.GroupUserAction" method="write">
+            <result>/WEB-INF/view/groupuser/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.GroupUserAction" method="modify">
+            <result type="redirect">show?id=${modifiedId}&amp;contents=${contentsCode}</result>
+        </action>
+        <action name="delete" class="artn.common.controller.GroupUserAction" method="delete">
+            <result type="redirect">list</result>
+        </action>
+    </package>    
+        
+  <package name="board" namespace="/board" extends="artn-common">
+    	<interceptors>
+    		<interceptor name="authBoard" class="artn.common.interceptor.AuthBoardInterceptor"></interceptor>
+    		<!-- <interceptor name="token" class="org.apache.struts2.interceptor.TokenInterceptor"/> -->
+    		<interceptor-stack name="boardStack">
+    			<interceptor-ref name="authBoard"></interceptor-ref>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<default-interceptor-ref name="boardStack"></default-interceptor-ref>
+    	
+        <action name="list" class="artn.common.controller.BoardAction" method="list">
+            <result name="normal">/WEB-INF/view/board/normal/list.jsp</result>
+            <result name="img">/WEB-INF/view/board/img/list.jsp</result>
+            <result name="file">/WEB-INF/view/board/file/list.jsp</result>
+            <result name="notice">/WEB-INF/view/board/notice/list.jsp</result>
+            <result name="guest">/WEB-INF/view/board/guest/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.BoardAction" method="show">
+            <result name="normal">/WEB-INF/view/board/normal/show.jsp</result>
+            <result name="img">/WEB-INF/view/board/img/show.jsp</result>
+            <result name="file">/WEB-INF/view/board/file/show.jsp</result>
+            <result name="notice">/WEB-INF/view/board/notice/show.jsp</result>
+            <result name="guest">/WEB-INF/view/board/guest/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.BoardAction" method="edit">
+        	
+            <result name="normal">/WEB-INF/view/board/normal/edit.jsp</result>
+            <result name="img">/WEB-INF/view/board/img/edit.jsp</result>
+            <result name="file">/WEB-INF/view/board/file/edit.jsp</result>
+            <result name="notice">/WEB-INF/view/board/notice/edit.jsp</result>
+            <result name="guest">/WEB-INF/view/board/guest/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.BoardAction" method="write">
+            <result name="normal">/WEB-INF/view/board/normal/edit.jsp</result>
+            <result name="img">/WEB-INF/view/board/img/edit.jsp</result>
+            <result name="file">/WEB-INF/view/board/file/edit.jsp</result>
+            <result name="notice">/WEB-INF/view/board/notice/edit.jsp</result>
+            <result name="guest">/WEB-INF/view/board/guest/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.BoardAction" method="modify">
+            <result type="redirect" name="normal">list?board_no=${board_no}&amp;contents=${contents_menu}</result>
+            <result type="redirect" name="img">list?board_no=${board_no}&amp;view=${view}&amp;contents=${contents_menu}</result>
+            <result type="redirect" name="file">list?board_no=${board_no}&amp;view=${view}&amp;contents=${contents_menu}</result>
+            <result type="redirect" name="notice">list?board_no=${board_no}&amp;view=${view}&amp;contents=${contents_menu}</result>
+            <result type="redirect" name="guest">list?board_no=${board_no}&amp;view=${view}&amp;contents=${contents_menu}</result>
+        </action>
+        <action name="delete" class="artn.common.controller.BoardAction" method="delete">
+            <result type="redirect" name="normal">list?board_no=${board_no}&amp;contents=${contents}</result>
+            <result type="redirect" name="img">list?board_no=${board_no}&amp;view=${view}&amp;contents=${contents}</result>
+            <result type="redirect" name="file">list?board_no=${board_no}&amp;view=${view}&amp;contents=${contents}</result>
+            <result type="redirect" name="notice">list?board_no=${board_no}&amp;view=${view}&amp;contents=${contents}</result>
+            <result type="redirect" name="guest">list?board_no=${board_no}&amp;view=${view}&amp;contents=${contents}</result>
+        </action>    
+        
+        
+        <action name="password_check" class="artn.common.controller.BoardAction" method="passwordCheck"></action>
+        <action name="password_check_list" class="artn.common.controller.BoardAction" method="passwordCheck_list"></action>
+        
+        
+            
+        <action name="commentWrite" class="artn.common.controller.BoardAction" method="commentWrite">
+        	<result type="redirect" name="normal">show?id=${id_board}&amp;board_no=${board_no}&amp;contents=${contents}</result>
+        </action>
+        <action name="commentReply" class="artn.common.controller.BoardAction" method="commentReply">
+        	<result type="redirect" name="normal">show?id=${id_board}&amp;board_no=${board_no}&amp;contents=${contents}</result>
+        </action>
+        <action name="commentDelete" class="artn.common.controller.BoardAction" method="commentDelete">
+        	<result type="redirect" name="normal">show?id=${id}&amp;board_no=${board_no}&amp;contents=${contents}</result>
+        </action>
+        <action name="commentModify" class="artn.common.controller.BoardAction" method="commentModify">
+        	<result type="redirect" name="normal">show?id=${id_board}&amp;board_no=${board_no}&amp;contents=${contents}</result>
+        </action>
+        <action name="attachDelete" class="artn.common.controller.BoardAction" method="attachDelete">
+        	<result type="stream">
+        		<param name="inputName">attachDeleteResult</param>
+        		<param name="contentType">text/html;charset=UTF-8</param>
+        	</result>
+        </action>   
+    </package>
+    
+    <package name="product" namespace="/product" extends="artn-common">
+        <interceptors>
+            <interceptor name="productCheck" class="artn.common.interceptor.AuthProductInterceptor"></interceptor>
+            <interceptor-stack name="productCheckStack">
+                <interceptor-ref name="productCheck"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="productCheckStack"></default-interceptor-ref>
+        
+        <action name="list" class="artn.common.controller.ProductAction" method="list">
+            <result name="other">/WEB-INF/view/product/list.jsp</result>
+        </action>
+        <action name="grid" class="artn.common.controller.ProductAction" method="list">
+            <result>/WEB-INF/view/product/grid.jsp</result>
+            <result name="other">/WEB-INF/view/product/grid_other.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.ProductAction" method="show">
+            <result>/WEB-INF/view/product/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.ProductAction" method="edit">
+            <result>/WEB-INF/view/product/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.ProductAction" method="write">
+            <result>/WEB-INF/view/product/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.ProductOptGroupAction" method="modify">
+            <result type="chain">modOpt</result>
+        </action>
+        <action name="modOpt" class="artn.common.controller.ProductAction" method="modify">
+            <result name="input" type="redirect">list</result>
+            <result type="redirect">show?id=${id}&amp;contents=${contents}</result>
+        </action>
+        <!-- 
+        <action name="modify" class="artn.common.controller.ProductAction" method="modify">
+            <result type="chain">modOpt</result>
+            <result name="input" type="chain">insOpt</result>
+        </action>
+        <action name="insOpt" class="artn.common.controller.ProductOptGroupAction" method="modify">
+            <result type="redirect">list</result>
+        </action>
+        <action name="modOpt" class="artn.common.controller.ProductOptGroupAction" method="modify">
+            <result type="redirect">show?id=${id}&amp;contents=${contents}</result>
+        </action>
+         -->
+        <action name="check" class="artn.common.controller.ProductAction" method="check"></action>
+        <action name="rating" class="artn.common.controller.ProductAction" method="rating">
+            <result type="redirect">/purchase/list</result>
+        </action>
+    </package>
+    
+    <package name="productImg" namespace="/product/img" extends="artn-common">
+        <action name="list" class="artn.common.controller.ProductImgAction" method="list">
+            <result>/WEB-INF/view/product/img/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.ProductImgAction" method="show">
+            <result>/WEB-INF/view/product/img/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.ProductImgAction" method="edit">
+            <result>/WEB-INF/view/product/img/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.ProductImgAction" method="write">
+            <result>/WEB-INF/view/product/img/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.ProductImgAction" method="modify">
+            <result type="redirect">list</result>
+        </action>
+    </package>
+    
+    <package name="productOptGroup" namespace="/product/optgroup" extends="artn-common">
+        <action name="list" class="artn.common.controller.ProductOptGroupAction" method="list">
+            <result>/WEB-INF/view/product/optgroup/list.jsp</result>
+        </action>
+        <action name="optlist" class="artn.common.controller.ProductOptGroupAction" method="optlist">
+            <result>/WEB-INF/view/product/optgroup/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.ProductOptGroupAction" method="show">
+            <result>/WEB-INF/view/product/optgroup/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.ProductOptGroupAction" method="edit">
+            <result>/WEB-INF/view/product/optgroup/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.ProductOptGroupAction" method="write">
+            <result>/WEB-INF/view/product/optgroup/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.ProductOptGroupAction" method="modify">
+            <result type="redirect">list</result>
+            <result name="ajaxReturn" type="stream">
+                <param name="inputName">ajaxReturnInputStream</param>
+                <param name="contentType">text/html;charset=UTF-8</param>
+            </result>
+            <!-- <result>/WEB-INF/view/product/optgroup/json.jsp</result> -->
+        </action>
+        <action name="optmodify" class="artn.common.controller.ProductOptGroupAction" method="optmodify">
+            <result type="redirect">list</result>
+            <result name="ajaxReturn" type="stream">
+                <param name="inputName">ajaxReturnInputStream</param>
+                <param name="contentType">text/html;charset=UTF-8</param>
+            </result>
+            <!-- <result>/WEB-INF/view/product/optgroup/json.jsp</result> -->
+        </action>
+        <action name="delete" class="artn.common.controller.ProductOptGroupAction" method="delete">
+            <result type="redirect">list</result>
+            <result name="ajaxDeleteReturn" type="stream">
+                <param name="inputName">ajaxDeleteReturnInputStream</param>
+                <param name="contentType">text/html;charset=UTF-8</param>
+            </result>
+        </action> 
+    </package>
+    
+    <package name="productOptItem" namespace="/product/optitem" extends="artn-common">
+        <action name="list" class="artn.common.controller.ProductOptItemAction" method="list">
+            <result>/WEB-INF/view/product/optitem/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.ProductOptItemAction" method="show">
+            <result>/WEB-INF/view/product/optitem/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.ProductOptItemAction" method="edit">
+            <result>/WEB-INF/view/product/optitem/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.ProductOptItemAction" method="write">
+            <result>/WEB-INF/view/product/optitem/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.ProductOptItemAction" method="modify">
+            <result type="redirect">list?id_group=${id_group}</result>
+        </action>
+        <action name="delete" class="artn.common.controller.ProductOptItemAction" method="delete">
+            <result type="redirect">list?id_group=${id_group}</result>
+        </action>
+    </package>
+    
+    <package name="purchase" namespace="/purchase" extends="artn-common">
+        <action name="list" class="artn.common.controller.PurchaseAction" method="list">
+        	<result name="login" type="chain">login</result>
+            <result>/WEB-INF/view/purchase/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.PurchaseAction" method="show">
+            <result>/WEB-INF/view/purchase/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.PurchaseAction" method="edit">
+            <result>/WEB-INF/view/purchase/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.PurchaseAction" method="write">
+            <result type="redirect">list</result>
+            <result name="oversold">/WEB-INF/view/purchase/oversold.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.PurchaseAction" method="modify">
+            <!-- <result type="chain">list</result> -->
+            <!-- <result type="chain">update</result> -->
+            <result type="redirect">list</result>
+            <result name="complete">/WEB-INF/view/purchase/complete.jsp</result>
+        </action>
+        <action name="update" class="artn.common.controller.PurchaseAction" method="update">
+            <result type="redirect">/payment/list?rowlimit=${rowlimit}&amp;page=${page}&amp;contents=${contents}</result>
+            <result name="complete">/WEB-INF/view/purchase/complete.jsp</result>
+        </action>
+        <action name="login" class="artn.common.controller.UserAction">
+            <result>/WEB-INF/view/user/login.jsp</result>            
+        </action>
+        <action name="stats" class="artn.common.controller.PurchaseAction" method="stats">
+            <result>/WEB-INF/view/purchase/stats.jsp</result>            
+        </action>
+        <action name="historylist" class="artn.common.controller.PurchaseHistoryAction" method="list">
+            <result>/WEB-INF/view/purchase/history_view.jsp</result>
+        </action>
+        <action name="optlist" class="artn.common.controller.PurchaseAction" method="optList">
+            <result type="redirect">list</result>
+        </action>
+    </package>
+    
+    <package name="userCart" namespace="/product/cart" extends="artn-common">
+    	<interceptors>
+    		<interceptor name="authCartCheck" class="artn.common.interceptor.AuthCartInterceptor"></interceptor>
+    		<interceptor-stack name="authCartStack">
+    			<interceptor-ref name="authCartCheck"></interceptor-ref>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	
+    	<default-interceptor-ref name="authCartStack"></default-interceptor-ref>
+    	<action name="login" class="artn.common.controller.UserCartAction" method="login">
+            <result type="redirect">list</result>
+        </action>
+    	
+        <action name="list" class="artn.common.controller.UserCartAction" method="list">
+            <result>/WEB-INF/view/product/cart/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.UserCartAction" method="show">
+            <result>/WEB-INF/view/product/cart/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.UserCartAction" method="edit">
+            <result>/WEB-INF/view/product/cart/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.UserCartAction" method="write">
+            <result></result>
+        </action>
+        <action name="delete" class="artn.common.controller.UserCartAction" method="delete">
+            <result type="redirect">list</result>
+            <result name="ajaxReturn" type="stream">
+                <param name="inputName">ajaxReturnInputStream</param>
+                <param name="contentType">text/html;charset=UTF-8</param>
+            </result>
+        </action>
+        <action name="modify" class="artn.common.controller.UserCartAction" method="modify">
+            <result type="redirect">list</result>
+            <result name="ajaxReturn" type="stream">
+                <param name="inputName">ajaxReturnInputStream</param>
+                <param name="contentType">text/html;charset=UTF-8</param>
+            </result>
+        </action>
+    </package>
+    
+    <package name="email" namespace="/email" extends="artn-common">
+    	<action name="send" class="artn.common.controller.EmailAction" method="list">
+    		<result>/WEB-INF/view/email/email.jsp</result>
+    	</action>
+        <action name="write" class="artn.common.controller.EmailAction" method="write">
+            <result type="redirect">/main</result>
+        </action>
+    </package>
+    
+    <package name="payment" namespace="/payment" extends="artn-common">
+    	<action name="payment" class="artn.common.controller.PaymentAction" method="payment">    		
+    		<result>/WEB-INF/view/payment/paymentForm.jsp</result>
+    	</action>
+    	<action name="paymentOk" class="artn.common.controller.PaymentAction" method="payment">    		
+    		<result>/WEB-INF/view/payment/payment.jsp</result>
+    	</action>
+    	<action name="cancel" class="artn.common.controller.PaymentAction" method="cancel">    		
+    		<result>/WEB-INF/view/payment/cancelForm.jsp</result>    		
+    	</action>
+    	<action name="cancelOk" class="artn.common.controller.PaymentAction" method="cancel">    		
+    		<result>/WEB-INF/view/payment/inilite_cancel.jsp</result>    		
+    	</action>
+    	
+    	<action name="list" class="artn.common.controller.PaymentAction" method="list">
+            <result name="login" type="chain">login</result>
+            <result>/WEB-INF/view/payment/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.PaymentAction" method="show">
+            <result>/WEB-INF/view/purchase/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.PaymentAction" method="edit">
+            <result>/WEB-INF/view/purchase/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.PaymentAction" method="write">
+            <result type="redirect">list</result>
+        </action>
+        <action name="modify" class="artn.common.controller.PaymentAction" method="modify">
+            <result name="prodmodify" type="chain">purmodify</result>
+            <result type="redirect">/payment/list</result>
+        </action>
+        <action name="purmodify" class="artn.common.controller.PurchaseAction" method="modify">
+            <!-- <result type="chain">list</result> -->
+            <!-- <result type="chain">purupdate</result> -->
+            <result type="redirect">/purchase/list</result>
+            <result name="complete">/WEB-INF/view/purchase/complete.jsp</result>
+            <result name="account">/WEB-INF/view/purchase/account_view.jsp</result>
+        </action>
+        <action name="purupdate" class="artn.common.controller.PurchaseAction" method="update">
+            <result type="redirect">/purchase/list</result>
+            <result name="complete" type="redirect">/product/board/write?board_no=2&amp;id_product=${id_product }</result>
+            <result name="account">/WEB-INF/view/purchase/account_view.jsp</result>
+        </action>
+        <action name="login" class="artn.common.controller.UserAction">
+            <result>/WEB-INF/view/user/login.jsp</result>            
+        </action>
+        <action name="historyModify" class="artn.common.controller.PaymentAction" method="historyModify">
+            <result></result>
+        </action>
+    </package>   
+    
+    <package name="productBoard" namespace="/product/board" extends="artn-common">
+        <interceptors>
+            <interceptor name="authProductBoardCheck" class="artn.common.interceptor.AuthProductBoardInterceptor"></interceptor>
+            <interceptor-stack name="authProductBoardStack">
+                <interceptor-ref name="authProductBoardCheck"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        
+        <default-interceptor-ref name="authProductBoardStack"></default-interceptor-ref>
+        
+        <action name="edit" class="artn.common.controller.ProductBoardAction" method="edit">
+            <result>/WEB-INF/view/product/board/edit.jsp</result>
+            <result name="exchange">/WEB-INF/view/product/board/exchange_edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.ProductBoardAction" method="write">
+            <result>/WEB-INF/view/product/board/edit.jsp</result>
+            <result name="exchange">/WEB-INF/view/product/board/exchange_edit.jsp</result>
+        </action>
+        <action name="list" class="artn.common.controller.ProductBoardAction" method="list">
+            <result>/WEB-INF/view/product/board/list.jsp</result>
+            <result name="exchange">/WEB-INF/view/product/board/exchange_list.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.ProductBoardAction" method="modify">
+            <result type="redirect">list?id_product=${id_product}&amp;board_no=${board_no}</result>
+            <result name="exchange" type="redirect">/purchase/update?id_purchase=${id_purchase}&amp;status=${purchase_status}</result>
+        </action>
+        <action name="show" class="artn.common.controller.ProductBoardAction" method="show">
+            <result>/WEB-INF/view/product/board/show.jsp</result>
+        </action>
+        <action name="delete" class="artn.common.controller.ProductBoardAction" method="delete">
+            <result type="redirect">list?id_product=${id_product}&amp;board_no=${board_no}</result>
+            <result name="exchange" type="redirect">list?myposts=${myposts}&amp;board_no=${board_no}&amp;contents=${contents}</result>
+        </action>
+        <action name="contentsReply" class="artn.common.controller.ProductBoardAction" method="contentsReply">
+            <result type="redirect">list?myposts=${myposts}&amp;board_no=${board_no}&amp;contents=${contents}</result>
+        </action>
+        <action name="myposts" class="artn.common.controller.MiniBoardAction">
+            <result>/WEB-INF/view/user/myposts.jsp</result>
+        </action> 
+    </package>
+    <package name="popup" namespace="/popup" extends="artn-common">        
+        <action name="nonOpen" class="artn.common.controller.PopupAction" method="nonOpen">
+            <result></result>
+        </action>
+    </package>
+</struts>

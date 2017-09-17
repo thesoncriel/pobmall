@@ -1,0 +1,70 @@
+#footer { border-top: 1px solid #d2d2d2; }
+#footer .highlight,
+#footer .highlight a { color: #0096af; }
+#footer .column-group {font-size: 12pt;  display: table; width: 100%; background-color: #f7f7f7;}
+#footer .column-group .column{ padding: 2%; display: table-cell; vertical-align: top;}
+#footer .column h2 {  }
+#footer .column.products { width: 30%; }
+#footer .column.services { width: 20%; }
+#footer .column.help { width: 20%; }
+#footer .column.company { background-color: #efefef; }
+
+#footer .column.products .info-link { margin-top: 1.2em; }
+#footer .column.products .info-link li { border-bottom: 1px solid #d2d2d2; margin-bottom: 1.2em; }
+#footer .column.products a .artn-icon-32{ background-image: url("/img/prj/prj-icons_32x54x2_footer.jpg"); height: 54px;}
+#footer .column.products .artn-icon-32.introduce{ background-position: 0px 0px; }
+#footer .column.products .artn-icon-32.feature{ background-position: -32px 0px; }
+#footer .column.products a h3 { display: inline-block; vertical-align: top; margin-left: 0.7em;}
+
+#footer .column.services strong { margin-top: 1em; display: block; font-size: 1.2em;}
+#footer .column.services address { font-weight: bold; font-style: normal; font-size: 1.1em;}
+#footer .column.help ul li { margin-top: 0.6em; }
+
+#footer .column.company h1 a{
+	width: 147px;
+	height: 39px;
+	
+	/* float: left; */
+	text-indent: -65535px;
+	background-image: url("../../img/jglovis/main/jglovis_logo.png");
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+	/* font-size: 0px; */
+	display: block;
+}
+#footer {text-align: center;}
+#footer .contents-wrap {margin-top: 20px; margin-bottom: 100px;}
+#footer .contents-wrap > ul { margin-bottom: 20px; }
+#footer ul li { border: none; text-align: left; width: auto; display: inline; padding-left: 1em; padding-right: 1em; border-left: 1px solid #ccc;}
+#footer ul li:FIRST-CHILD{border: 0;}
+#footer .contents-wrap > div > div,
+#footer .contents-wrap > div > ul {margin: 5px;}
+#footer .contents-wrap > div > div address {display: inline-block;}
+
+@media all and (max-width: 1023px){
+	#footer .column.products { display: none; }
+	#footer .column.services { width: 30%; }
+	#footer .column.help { width: 30%; }
+	#footer .contents-wrap { margin-bottom: 40px; }
+	#footer .contents-wrap .m-hdn-hdn { display: none; }
+	#footer .contents-wrap > div > div{ padding-left: 1em; text-align: left;}
+	#footer .contents-wrap > div > div,
+	#footer .contents-wrap > div > ul { margin-left: 0px; }
+	#footer .contents-wrap > div > ul > li { display: block; border: 0px; }
+	#footer .contents-wrap > div > div address { display: block; }
+	#footer .contents-wrap address b { display: block; }
+	
+}
+@media all and (max-width: 640px){
+	#footer .column-group .column { display: inline-block; }
+	#footer .column.products { display: none; }
+	#footer .column.services { width: 50%; }
+	#footer .column.help { width: 40%; }
+	#footer .column.company { width: 98%; }
+	
+	#footer .column.company { padding-right: 0; }
+	#footer .column.company h1,
+	#footer .column.company ul,
+	#footer .column.company small { display: inline-block; margin-top: 0;}
+	#footer .column.company .bottom-link { display: none; }
+}

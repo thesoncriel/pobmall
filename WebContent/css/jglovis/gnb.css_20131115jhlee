@@ -1,0 +1,171 @@
+
+.container{
+	/* min-width: 1024px; */
+}
+.container.fixed-header{
+	position: fixed;
+	width: 100%;
+	background-color: #fff; 
+	z-index: 100;
+	border-bottom: 15px solid #d9d9d9;
+	background-image: url('/img/jglovis/main/main-img-bg-top.png');
+	background-repeat: repeat-x;
+	/* height: 65px; */
+	height: 72px;
+}
+.container>.header{
+	width: 1024px;
+	margin: 0 auto;
+}
+@media all and (max-width:990px) { .container>.header{width:100%;} }
+/*top-menu*/
+.header .top-menu .top-gnb{
+	float: left;
+	width: 100%;
+	/* margin-top: -11px; */
+	margin-top: -5px;
+}
+.header .top-menu h1,
+.header .top-menu ul{
+/* 	display: inline; */
+}
+
+.header .top-menu h1{
+/* 	margin-right: 90px;
+	display: inline;
+	float: left;
+	padding-top: 8px;	 */
+	float: left;
+	width: 140px;
+	display: inline-block;
+	text-align: left;
+}
+
+
+.header .top-menu h1 a{
+	width: 140px;
+	height: 39px;
+	
+	/* float: left; */
+	text-indent: -65535px;
+	background-image: url("../../img/jglovis/main/jglovis_logo.png");
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+	/* font-size: 0px; */
+	background-size: 114px 30px;
+	display: inline-block;
+}
+
+.header .nav.top-menu{
+    text-align: right;    
+    height: 57px;
+	color: #fff;
+	font-size: 14px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	margin: 0 auto;
+	position: static;
+	/* border-bottom: 10px solid #d9d9d9; */ 
+}
+
+
+
+.header .nav.top-menu .account{
+	/* display: inline-table; */
+	height: 35px;
+}
+
+.header .nav.top-menu .account a{
+    text-decoration:none;
+    color: #666;
+    padding: 0px 10px 0px 10px;        
+    height: 13px;
+    font-size: 12px;
+    border-right: 1px solid #ddd;
+    font-family: "돋움", "arial black", sans-serif;
+    line-height: 23px
+}
+
+/* GNB MENU */
+.nav.top-menu .sub-menu-container{	
+	overflow: hidden;	
+}
+
+.nav.top-menu .sub-menu-container ul{
+	overflow: hidden;
+	float: right;
+}
+
+.nav.top-menu .sub-menu-container ul li{
+	float: left;	
+	height: 35px;
+	line-height: 35px;
+	display: inline-block;
+}
+.nav.top-menu .sub-menu-container ul li a{
+	text-decoration: none;
+/* 	float: left;
+	margin-top: 16px; */
+}
+/* .nav.top-menu .sub-menu-container ul li:active,
+.nav.top-menu .sub-menu-container ul li:hover{	
+	background-color: #d9d9d9;	
+} */
+.nav.top-menu .sub-menu-container ul li:hover a.store{
+	background-color: #e78200;
+}
+
+.nav.top-menu .sub-menu-container ul li:hover a{
+	background-color: #f54785;
+	color: #fff;
+}
+
+.nav.top-menu .sub-menu-container ul li a{	
+	padding: 0px 26px;
+	color: #333;
+	border-right: 1px solid #ccc;
+	font-family: "malgun gothic"
+}
+.nav.top-menu .sub-menu-container ul li .store{	
+	padding: 0px 26px;
+	color: #e78200;
+	border-right: 1px solid #ccc;	
+}
+
+.nav.top-menu .sub-menu-container div{
+	float: right;
+}
+.nav.top-menu .sub-menu-container div a span{
+	float: left;
+	margin-right: 5px;
+}
+
+.nav.top-menu ul.depth1 li.selected a.store{
+	background-color: #e78200;	
+}
+.nav.top-menu ul.depth1 li.selected a{
+	background-color: #f54785;
+	color: #fff;	
+}
+.header .nav.top-menu .account .top-decoration span:first-child{
+	color: #888;
+}
+
+.header .nav.top-menu .account .top-decoration span{	
+	vertical-align:top;
+	font-size: 9px;
+	font-family: "arial", sans-serif;
+	font-weight: bold;
+	color: #9b9b9b;
+	line-height: 21px;
+}
+.header .nav.top-menu .account .top-decoration span mark{
+	vertical-align: top;
+	color: #82bfbf;
+}
+
+/* .nav.top-menu .sub-menu-container ul li:hover a em,
+.nav.top-menu ul.depth1 li.selected a{
+	color: #fff;
+} */
+/* GNB MENU */

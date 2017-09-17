@@ -1,0 +1,118 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="a" tagdir="/WEB-INF/tags" %>
+<a:html title=" - Product Action Test : Edit" contents="${contentsCode }">
+<script>
+$(document).ready(function(){
+	$("select[name^='opt_']").change(function(){
+		var iValue = 0;
+        $("select[name^='opt_'] option:selected").each(function(){
+            if($(this).val() == ""){
+                iValue += 0;
+            }else{
+                iValue += parseInt($(this).val());  
+            }
+        });
+        $("[name='price_opt']").val(iValue);
+	});
+	
+});
+</script>
+	<div class="header">
+		<h1>${showData.name }</h1>
+		<div id="breadcrumbs" data-sub="*상품정보"></div>
+	</div>
+<div class="section">
+	<div class="article">
+		<form action="cart/modify" method="post" enctype="multipart/form-data">
+			<fieldset>
+			<table class="board-edit">
+				<tbody class="row-scope">
+			
+					<tr>
+						<th>사진</th>
+						<td><a:img src="/download?path=upload/product/img/&fileName=${showData.file_img }" alt="상품 사진" srcNone="/img/none.png" altNone="상품 사진 없음 - 상품 등록 후 적용 됩니다." width="320" height="240" /></td></tr>			
+					<tr>
+					<th><label for="subject">상품명</label></th>
+					<td><input type="text" name="subject" readonly="readonly" style="border: none;" value="${showData.name }"/></td></tr>
+					<s:iterator value="subData.productOpt" var="item" status="s">
+					 <s:if test="#item.item_seq == 1">
+						<tr>
+							<th><label><s:property value="#item.opt_name"/></label></th>
+							<td><s:select name="opt_detail" list="subData.productOpt.{? (#this.seq == #item.seq) }" listKey='%{item_name + ":" +item_price}' listValue='%{item_name + ":" +item_price}' theme="simple" headerKey="선택안함:0" headerValue="-----선택-----"></s:select></td>
+						</tr>
+					</s:if>
+					</s:iterator>
+					<tr>
+						<th>할인 전 가격</th>
+						<td>${showData.price_before } 원</td></tr>
+					<tr>
+						<th>이벤트 가격</th>
+						<td>${showData.price_event } 원</td></tr>
+					<tr>
+						<th><label for="price">구매 가격</label></th>
+						<td><span>${showData.price }</span> 원</td>
+					</tr>			
+					<%-- <tr>
+					<th><label for="purchase_count">주문 개수</label></th>
+					<td><span><input type="text" id="purchase_count" name="purchase_count" value="1"/></span> 개</td></tr>
+					 --%>
+					<%-- <tr>
+					<th>총 구매 가격</th>
+					<td><input type="text" id="amount_adjust" name="amount_adjust" value="${showData.price }" readonly="readonly" style="border: none;"/> 원</td></tr>
+					 --%>
+					<!-- <tr>
+					<th>전달 메시지</th>
+					<td><input type="text" name="comment"/></td></tr>
+					 -->
+					<%-- <tr>
+					<th>적립 포인트</th>
+					<td>${showData.pay_point }</td></tr> --%>
+					
+					<tr>
+						<th>이용 약관</th>
+						<td>${showData.opt_terms_user }</td>
+					</tr>			
+					<tr>
+						<th>상품 설명</th>
+						<td>${showData.contents }</td>
+					</tr>			
+					<tr>
+						<th>상품 설명 요약</th>
+						<td>${showData.contents_summary }</td>
+					</tr>
+			
+				</tbody>
+			</table>
+		</fieldset>
+<!-- 숨김 필드 모음 -->
+<%-- <input type="hidden" name="product_count" value="${showData.product_count }"/>
+<input type="hidden" name="id_group" value="${showData.id_group }"/>
+<input type="hidden" name="id_opt_detail_group" value="${showData.id_opt_group}"/> --%>
+
+<input type="hidden" name="id_product" value="${showData.id }"/>
+<input type="hidden" name="opt" value=""/>
+<!-- <input type="hidden" name="opt_detail" value=""/> -->
+<input type="hidden" name="opt_detail_seq" value=""/>
+<!-- <input type="hidden" name="price" value=""/> -->
+<input type="hidden" name="file_img" value="${showData.file_img }"/>
+<input type="hidden" name="price_opt" value=""/>
+<input type="hidden" id="price" name="price" value="${showData.price }"/>
+			<div class="footer board">
+				<div class="buttons">
+					<%-- <s:if test='%{showData.date_sales_diff >= 0}'> --%>
+					<button type="submit" class="artn-button board">장바구니 담기</button>
+					<%-- </s:if> --%>
+					<s:if test='%{auth.isGroupAdmin(id_group)}'>
+					 <a href="edit?id=${showData.id }" class="artn-button board">수정</a>
+					</s:if>
+					<%-- <a href="cart/list">장바구니</a> --%>
+					<%-- <a href="list?id_group=${showData.id_group }">목록</a> --%>
+					<a href="grid" class="artn-button board">목록</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</a:html>

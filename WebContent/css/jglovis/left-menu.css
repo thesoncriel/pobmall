@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.left-menu{
+	width: 165px;
+	background-position: 190px 0px;
+	display: table-cell;
+	border-left: 2px solid #eaeaea;
+	border-right: 2px solid #eaeaea;
+}
+
+.left-menu h3,
+.sitemap h3{
+    font-size: 20px;
+    color: #999999;
+    font-weight: bold;
+    padding: 0px 0px 10px 0px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #66cccc;
+    display: block;
+    /*width: 169px;*/
+    height: 30px;
+}
+
+.left-menu ul li,
+.sitemap ul li{   
+    
+    font-weight: bold;
+    margin-bottom: 0px;
+    
+    display: inline-block;
+	border-bottom: 1px solid #dedede;
+}
+
+.left-menu ul li>a,
+.left-menu ul li ul li a,
+.sitemap ul li>a,
+.sitemap ul li ul li a{
+    float: left;
+    clear: both;
+         
+    width: 155px;
+    padding: 0px 0px 0px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #999999;
+    
+    line-height: 30px;
+    position: relative;
+}
+
+.left-menu>ul>li>a:after{
+	content: " ";
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	width: 16px;
+	height: 16px;
+	
+	/* background: url(images/artn-icons.png) no-repeat; */
+	background-position: -32px -96px;
+}
+
+
+.left-menu ul li>.selected{    
+    /*display: block;*/
+    display: inline;
+    height: 30px;
+    /*background-color: #d5f694;*/
+    font-weight: bold;
+    padding: 0px 0px 0px 10px;
+    
+    
+    /*text-decoration: none;*/
+    font-size: 14px;
+    color: #ffffff;
+    
+    background-color: #66cccc; 
+}
+
+.left-menu ul li ul li .selected{    
+	padding: 3px 0 0 13px;
+}
+
+.left-menu ul>li>a:hover{
+	background-color: #66cccc;
+	color: white;	
+}
+
+.left-menu ul li ul li a:hover,
+.left-menu ul li ul li a,
+.sitemap ul li ul li a{
+	padding: 3px 0px 0px 13px;
+}
+
+.left-menu ul li ul,
+.sitemap ul li ul{
+   
+   clear: both;   
+}   
+
+.left-menu ul li ul li,
+.sitemap ul li ul li{
+   display: inline-block;
+   width: 130px;   
+   margin-left: 10px;
+   padding: 0px;
+   border-bottom: none;
+}
+.left-menu ul li ul li a,
+.sitemap ul li ul li a{
+    margin: 0px 0px 0px 10px;
+    background: url(images/bizicon/heal365-bg-pack.png) no-repeat;
+	background-position: -10px -352px;
+}
+.left-menu ul li ul li .selected,
+.left-menu ul li ul li a:hover{    
+    background-color: none;
+    color: #33cccc;
+    width: 100%;
+    background: url(images/bizicon/heal365-bg-pack.png) no-repeat;
+	background-position: -10px -288px;
+}
+
+.left-menu>ul>li>ul {
+	display: none;
+}
+.left-menu>ul>li>a.selected+ul,
+.left-menu>ul>li>ul.show{
+	display: block;
+}
+
+/*left*/
+
+
+
+/*사이트 맵*/
+.sitemap{
+    margin: 0px 15px 20px 15px;
+	float: left;
+	width: 130px;
+	height: 495px;
+}
+ 
+.sitemap h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.sitemap h3 span{
+    font-size: 11px;    
+    color: #cccccc;
+    display: block;
+    padding-left: 0px;
+}
+
+
+.sitemap>ul{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.sitemap>ul li{
+	
+}
+.sitemap>ul li a{
+	font-size: 12px;
+	color: #999999;
+	line-height: 25px;
+	letter-spacing: normal;
+}
+
+.sitemap>ul li ul{
+	background-color: #f7f7f7;
+	border-top: 1px solid #dedede;
+	padding-top: 5px;
+}
+
+.sitemap>ul li ul li a{
+	font-size: 11px;
+	color: #999999;
+	background-position: 100%;
+	padding-left: 0px;	
+	line-height: 10px;
+}
+
+.sitemap ul li,
+.sitemap ul li>a,
+.sitemap ul li ul li a{
+    width: 100%;
+}
+
+/*사이트 맵*/
+
+/* Admin Left Menu*/
+.jgadmin div{
+}
+.jgadmin h3{
+	padding-left: 15px;
+	padding-top: 20px;
+	height: 44px;
+	border: 0px;
+	border-top: 40px solid #eaeaea;
+}
+.jgadmin h3 a{
+	font-family: Malgun Gothic;
+	font-weight: bold;
+	font-size: 23px;
+	color: #666;
+}
+.jgadmin div>ul{
+	width: 170px;
+	margin-top: -20px;
+	padding-left: 18px;
+}
+.jgadmin>div>ul>li{
+	width: 155px;
+	border: 0px;
+	border-top: 1px solid #eaeaea;
+}
+.jgadmin ul li a{
+	font-size: 12px;
+	color: #808080
+}
+.jgadmin ul li>.selected{
+	font-size: 12px;
+	color: #ea6334;
+	background-color: #fff;
+}
+.jgadmin ul li>.selected:before{
+	content: ' ';
+	background-color: #e96334;
+	width: 5px;
+	height: 13px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 30%;
+}
+.jgadmin ul li a:hover{
+	color: #ea6334;
+	background-color: #fff;
+}
+.jgadmin ul li ul li{
+	margin-left: 0px;
+}
+.jgadmin ul li ul li a{
+	font-family: Malgun Gothic;
+	font-weight: bold;
+	font-size: 11px;
+	color: #808080;
+}
+.jgadmin ul li ul li .selected,
+.jgadmin ul li ul li a:hover{
+	color: #ea6334;
+}

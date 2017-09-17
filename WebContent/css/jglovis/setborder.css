@@ -1,0 +1,6 @@
+/* set border css
+ * 퍼블리싱 작업 시 각 요소들의 테두리를 보이게 함
+ *  */
+h1, h2, h3, h4, h5, h6, p, div, span, article, section, nav, header, footer, ul, ol, li, dl, dt, dd img, input[type="submit"], input[type="button"], a {
+	border: 1px red solid;
+}

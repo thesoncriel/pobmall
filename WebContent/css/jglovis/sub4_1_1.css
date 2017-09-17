@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+.article.sub4_1_1{
+	background: url(/img/contents/company_bg_img.png) no-repeat;
+	background-position: 440px 0px;
+}
+.article.sub4_1_1 h4{
+	margin-top: 90px;
+}
+.article.sub4_1_1 h2 span,
+.article.sub4_1_1 h3 span,
+.article.sub4_1_1 h4 span,
+.article.sub4_1_1 p span{
+	color: #cccccc;
+}
+.article.sub4_1_1 h2 em{
+	color: #33cccc;
+}
+.article.sub4_1_1 p{
+	line-height: 25px;
+	font-size: 14px;
+}
+.article.sub4_1_1 div{
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.article.sub4_1_1 div ul li{
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 30px;
+}
+
+.article.sub4_1_1 div ul li h6{
+	font-size: 14px;
+	color: #666666;	
+}
+.article.sub4_1_1 div ul li h6 span{
+	font-size: 12px;
+	color: #999999;	
+	display: block;
+}
+.article.sub4_1_1 div ul li img{
+	width: 209px;
+	height: 67px;
+	margin-top: 10px;
+}

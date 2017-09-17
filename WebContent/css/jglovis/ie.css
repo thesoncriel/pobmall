@@ -1,0 +1,271 @@
+
+
+.board-edit thead th {width: 0px;}
+
+
+.header .gnb.horizon ul li ul{
+    margin-left: 165px;
+}
+
+
+.top-contents .medifit_slide .medifit_slide_img li a span {
+	background: url(images/artn-bg_opacity_fff_80.png);
+}
+
+.top-contents .medifit_slide .medifit_slide_nav li a{
+	letter-spacing: 0px;
+}
+
+.contents-wrap {
+	width: 1024px;
+	margin: 0 auto;
+}
+.search_button {
+	margin-top: 1px;
+	float: right;
+}
+
+.product-grid .desc h3 {
+	font-size: 16px;
+}
+.product-grid .desc h4 {
+	font-size: 11px;
+	font-weight: 600;
+}
+.product-grid .footer .price{
+	font-size: 16px;
+	letter-spacing: -1px;
+}
+
+/*.board-list thead{
+	width: 600px;
+	float: left;
+ }
+ 
+.board-list thead tr{
+	float: left;
+	width: 600px;
+}
+
+.board-list th .view-cnt{
+	background-position: -810px -64px;
+	float: left;
+	width: 140px;
+}*/
+
+
+
+
+
+
+
+/*gnb*/
+/* .header .top-menu h1 a{
+	background-size: 114px 30px;
+	display: inline-block;
+} */
+
+/* .header .nav.top-menu .account .top-decoration span{
+	letter-spacing: 0.8px;
+} */
+
+.header .top-menu .top-gnb{
+	height: 39px;
+}
+
+.header .top-menu h1{
+	margin-top: 3px;
+}
+.nav.top-menu .sub-menu-container{	
+	height: 39px;
+}
+.nav.top-menu .sub-menu-container ul{
+	margin-top: 10px;
+}
+.nav.top-menu .sub-menu-container ul li{
+	line-height: normal; 
+}
+
+
+.product-show .price-info .buttons {
+	text-align: right;
+	margin: 0 33px 1.6em 0px;
+}
+/*gnb*/
+
+
+
+
+
+
+
+
+
+/*footer*/
+
+#footer .column .explore div h1,
+#footer .column-company .devicehelp h1{
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+
+#footer .column .explore ul{
+	padding-left: 0px;
+	margin-top: 0px;
+}
+
+
+#footer .column-company .devicehelp>ul{
+	padding-left: 0px;
+	margin-bottom: 0px;
+	display: inline-block;	
+}
+#footer .column-company .devicehelp ul{
+	padding-left: 0px;
+}
+#footer .column-company .devicehelp div{
+	margin-top: 75px;
+}
+
+
+#footer .column-products ul{
+	padding-left: 0px;
+}
+
+#footer .column-products ul li{
+	height: 40px;
+}
+#footer .column-products ul li a{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 45px;
+	float: left;
+}
+ 
+#footer .column-products ul li a .info .name{
+	margin-top: 0px;
+}
+#footer .column-products .explore h1{
+	margin-top: 0px;
+}
+/*footer*/
+
+/* 제품소개측 table에 nth-child가 안먹히는 오류로 인해 추가 함 - 2013.11.26 by jhson [시작] */
+.sub tbody.row-scope th{ background-color: #ddd; }
+.sub tbody.row-scope tr { border-top: 1px solid #ccc; }
+.sub tbody.row-scope tr:first-child { border-top: 1px solid #ccc; }
+/* 제품소개측 table에 nth-child가 안먹히는 오류로 인해 추가 함 - 2013.11.26 by jhson [종료] */
+
+/* IE8에서 product-grid에 미디어 쿼리가 안먹히는 관계로 여기로 복사함. - 2013.11.27 by jhson [시작] */
+.product-search input[type='text']{ width: 26%; }
+
+.product-grid form{	
+	width: 30%;
+/* grid 수정 thkim */
+	margin: 14px;	
+	text-align: left;
+	display: inline-block;
+/* grid 수정 thkim */
+	vertical-align: top;
+}
+.product-grid .preview{
+	margin-bottom: 15px;
+}
+.product-grid .preview ul{
+	float: left;
+	border-top: 1px solid #ddd;
+}
+.product-grid .preview ul li{
+	width: 35px;
+	height: 35px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	display: inherit;
+}
+
+.product-grid .preview .content{
+	width: 195px;
+	height: 160px;
+	display: block;
+}
+
+.product-grid .preview b{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+}
+
+.product-grid .preview b+div{
+	text-align: center;
+	margin-top: 5px;
+}
+
+.product-grid .preview b+div a{
+	width: 27px;
+	height: 13px;
+	display: inline-block;
+	border: 0px solid red;
+}
+.product-grid .preview b+div>a{
+	background-color: #000000;
+}
+.product-grid .preview b+div a+a{
+	background-color: #3E7280;
+}
+.product-grid .desc{
+/* grid 수정 thkim */
+	/* height: 100px; */
+/* grid 수정 thkim */
+	border: 0px solid red;
+}
+
+.product-grid .desc h3{
+	font-size: 17px;
+}
+
+.product-grid .desc h4{
+	font-size: 12px;
+}
+
+.product-grid .footer{
+	position: relative;	
+}
+/* .product-grid .footer>div{
+	float: left;
+	border: 0px solid red;
+}
+.product-grid .footer>div+div{
+	float: right;
+	border: 0px solid red;
+} */
+/* grid 수정 thkim */
+.product-grid .more-view{
+	margin:10px 0px 8px 0px;
+}
+
+.product-grid .footer .price {
+	font-size: 17px;
+	vertical-align: middle;
+}
+
+.product-grid .footer .artn-button{
+	position: absolute;
+	right: 65px;
+	top: -6px;	
+}
+
+.product-grid .footer .artn-button.board.ui-button{
+	background: #e78200;
+	/*background: #F54785;*/
+	border-radius:20px 20px 20px 20px;
+	cursor:pointer;
+	color:#fff;
+	width: 100px;
+}
+.product-grid .footer .artn-button.board.ui-button:hover{
+	background: #FF1F6F;
+	/*background: #E75C00;*/
+}
+/* IE8에서 product-grid에 미디어 쿼리가 안먹히는 관계로 여기로 복사함. - 2013.11.27 by jhson [종료] */

@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*.footer*/
+	
+	
+	#footer{
+		border-top:4px solid #6cd9e4;
+		overflow: hidden;
+		margin: 10px 0px 30px 0px;
+		width: 100%;
+	}	
+	
+	#footer>div{              
+		width: 1024px;
+		height: 40px;
+		margin: 0 auto;
+		padding-top: 16px; 
+   }
+   
+   #footer .section{    
+   		margin-top: 0px;
+		float:left;
+		/*width: 772px;*/
+   }
+   	
+   	#footer .section h1 a{
+        float:left;
+        font-size:0;   
+        margin: 3px 18px 31px 0px;
+        background-image: url("images/biz-logo_bottom.png");
+        width:88px;
+        height:27px;
+    }
+    
+    #footer .section address{     
+        margin: 2px 0px 3px 106px;
+        /*width: 625px;*/  
+        color:#666;
+        font-size:11px; 
+        font-weight: bold;
+        font-style: normal;
+        line-height: 20px;
+        
+        /*line-height: 15px;*/
+    }
+    
+    #footer .section small{
+    	display: block;
+        color:#929292;
+        margin-top: -3px;
+        font-size:10px;
+    }
+    
+    #footer .nav{
+        /*width: 280px;*/
+		height: 20px;
+		float: right;
+    }
+    
+    #footer .nav ul{        
+       line-height: 20px;
+    }
+    
+    #footer .nav ul li{
+        float:left;
+        border-right:1px solid #d2d2d2;
+        padding: 0px 10px 0px 10px;        
+        height: 15px;
+        text-align:right;
+    }
+    
+    #footer .nav ul li:last-child{
+        border: 0;
+    }
+    
+    #footer .nav ul li a{
+        text-decoration:none;
+        color: #1ea1c7;
+        float:left;        
+        margin-top:-2px;
+        font-size:14px;  
+        font-weight: bold;
+    }
+    
+/*.footer*/

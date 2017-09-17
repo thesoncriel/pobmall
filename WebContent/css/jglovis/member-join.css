@@ -1,0 +1,126 @@
+.article.member-join{
+	margin: 0 auto; 
+	width: 90.5%;
+	
+}
+
+.article.step1 .validator h2{
+    display: block;
+    clear: both;
+    width: 170px;
+    font-size: 12px;
+    font-weight: bold;    
+    color: #4a6d00;
+    margin-top: 50px;
+}
+
+.article.step1 .validator fieldset div{
+    overflow-y: scroll;
+    margin-top: 9px;
+    /* margin-left: 5px; */    
+    padding: 15px 0 0 15px;
+    border: 1px solid #b9b9b9;
+    width: 98%;
+    /* width: 700px; */ 
+    height: 145px;
+    font-size: 11px;
+}
+
+.article.step1 .validator h2+div h4{
+    color: #000;
+    font-weight: bold;
+    font-size: 11px;
+    margin: 0px;
+}
+.article.step1 .validator h2+div p{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: #939393;    
+    font-size: 12px;
+}
+
+.article.step1 .validator input[type="checkbox"],
+.article.step1 .validator input[type="checkbox"]+label{
+    float: left;
+    margin-top: 7px;
+    margin-left: 0px;
+}
+
+.article.step1 .validator input[type="checkbox"]+label{
+    font-size: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================================================= board common =========================================================*/
+.article.member-join.step2 tbody tr:first-child 			{border-top: 2px solid #333;}
+
+.article.member-join.step2 			{ font-size: 12px; border-collapse: collapse; /*width: 100%; margin: 0 0 10px 0;*/}
+.article.member-join.step2 tr 	{ height: 30px; }
+.article.member-join.step2 tr			{ border-bottom: 1px solid #d1d1d1; }
+
+.article.member-join.step2 .footer 									{ float: right; margin-top: 10px; margin-bottom: 10px;}
+/*========================================================= board common =========================================================*/
+
+
+
+ 
+/*========================================================= board edit =========================================================*/
+.article.member-join.step2 table {border-collapse: collapse; width: 100%;} 
+.article.member-join.step2 tbody th, .article.member-join.step2 tbody td {padding-left: 7px;}
+.article.member-join.step2 tbody th {width: 80pt; background-color: #eee; font-weight: bold; text-align: left; border-right: 1px solid #d1d1d1;}
+.article.member-join.step2 tbody th label {width: 80px;}
+.article.member-join.step2 tbody td {padding-top: 5px; padding-bottom: 5px;}
+.article.member-join.step2 tbody #phonebox_phone_mobi input[type="text"] {width: 50px;}
+
+.article.step3 p{padding-left: 20px;}
+.article.step3 p:nth-child(1) {font-size: 22px; margin-bottom: 10px;}
+.article.step3 p:nth-child(2) {border-bottom: 1px solid #dedede; padding-bottom: 10px;}
+/*========================================================= board edit =========================================================*/
+
+
+
+
+/*이정훈 2013-12-11*/
+.article.member-join.step2 table tr th label{
+	width: 70px;
+	display: inline-block;
+}
+.board-edit thead td input[type="password"]{
+	margin-left: 0px;
+}
+@media all and (max-width: 1023px){
+	.article.step1 .validator input[type="checkbox"]{
+	    margin-top: 5px;
+	    margin-left: 0px;
+	}
+}
+@media all and (max-width: 1000px){
+	.contents .header {
+		height: 30px;
+	}
+	.hgroup.artn-bg-64{
+		display: none;
+	}
+}
+@media all and (max-width: 990px){
+	.article.step1 .validator fieldset div{
+	    width: 95%;
+	}
+}
+/*이정훈 2013-12-11*/

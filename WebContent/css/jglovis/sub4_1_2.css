@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+.article.sub4_1_2{
+	background: url(/img/contents/ugc.jpg) no-repeat;
+	background-position: 0px 0px;
+	background-size: 260px 380px;
+	width: 720px;
+	margin: 0 auto;
+}
+
+.article.sub4_1_2 h2 span,
+.article.sub4_1_2 h3 span,
+.article.sub4_1_2 h4 span,
+.article.sub4_1_2 h5 span,
+.article.sub4_1_2 p span{
+	color: #cccccc;
+}
+.article.sub4_1_2 h2 em{
+	color: #33cccc;
+}
+.article.sub4_1_2 p{
+	line-height: 25px;
+	font-size: 14px;
+}
+
+.article.sub4_1_2 div{
+	width: 420px;
+	height: 380px;
+	/*display: inline-block;*/
+	float: right;
+}
+
+.article.sub4_1_2 ul{
+	display: inline-block;
+	margin-top: 50px;
+}
+.article.sub4_1_2 ul li{
+	float: left;
+	margin-bottom: 10px;
+}
+
+.article.sub4_1_2 ul li h5{
+	float: left; 
+	width: 160px;
+	height: 35px;
+	margin-top: 14px;
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+}
+
+.article.sub4_1_2 ul li h5{
+	background-color: #6cd6d6;
+}
+.article.sub4_1_2 ul li+li h5{
+	background-color: #feb091;
+}
+.article.sub4_1_2 ul li+li+li h5{
+	background-color: #90cb72;
+}
+
+.article.sub4_1_2 ul li p{
+	display: inline-block;
+	border: 2px solid #33cccc;
+	width: 550px;
+	height: 36px;
+	text-align: center;
+	padding-top: 10px;
+	margin-left: 5px;
+}

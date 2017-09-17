@@ -1,0 +1,95 @@
+.user-find {
+	margin-top: 20px;
+	width: 1024px;
+}
+.user-find table
+{
+    border: 1px solid #ccc;
+    font-weight:bold;
+    color:  #666;
+    font-family: "돋움",Dotum;
+}
+
+.user-find .left
+{
+	margin-bottom: 30px;
+	width: 49.5%;
+    float:left;
+}
+
+.user-find .right
+{
+    width: 49.5%;
+    float:right;
+}
+.user-find .left th,
+.user-find .right th
+{
+	text-align: center;
+	font-size : 17px;
+	height: 50px;
+    background-color: #efefef;
+}
+
+.user-find>.left>.left_frm>.board-edit>tbody.row-scope>tr>td,
+.user-find>.right>.right_frm>.board-edit>tbody.row-scope>tr>td
+{
+	font-size : 16px;
+	padding-top: 25px;
+	padding-left: 93px;    
+	height: 154px;
+    vertical-align: top;
+}
+
+
+.user-find .left td input[type="text"],
+.user-find .right td input[type="text"]
+{
+    width: 240px;
+    height: 24px;
+    margin-bottom: 15px;
+}
+
+.user-find td label
+{
+	display: inline-block;
+	width: 60px;
+}
+.user-find select
+{
+	height: 30px;
+	width: 73px;
+}
+.user-find .bar
+{
+    font-size: 22px;
+}
+.user-find .board-edit .valid-group.phone input[type="text"],
+.user-find .board-edit .valid-group.phone input[type="text"]
+{
+    height: 24px;
+    width: 73px;
+}
+.user-find .artn-button.find
+{
+	margin-left: 99px;
+	width: 135px;
+	height: 30px;
+	font-size: 12px;
+	color : #fff;
+	background-color: #ff893b;
+	background-image: none;
+	border-radius : inherit;
+}
+
+.user-find td #passwd_find
+{
+	height:30px;
+    margin-left: 95px;
+    margin-bottom: 30px;
+}
+#dialog_id,
+#dialog_passwd
+{
+	text-align: center;
+}

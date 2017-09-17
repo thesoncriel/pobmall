@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.user-leave .board-edit.style3{
+	border: 1px solid #ccc;
+}
+
+.user-leave .board-edit.style3 .row-scope tr th{
+	border-right: 1px solid #ccc;
+	width: 15%;
+}
+.user-leave .board-edit.style3 .row-scope tr td{
+	text-align: center;
+}
+.user-leave .board-edit.style3 .row-scope tr:first-child td{
+	text-align: left;	
+}
+.user-leave .board-edit.style3 .row-scope td dl{
+	padding-left: 15px;
+	margin: 20px 0px 20px 0px;
+	line-height: 30px;
+}
+.user-leave .board-edit.style3 .row-scope td textarea{	
+	margin: 15px 0px 12px 0px;
+	width: 94%;
+	height: 100px;	
+}

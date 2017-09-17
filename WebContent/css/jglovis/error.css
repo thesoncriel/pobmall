@@ -1,0 +1,11 @@
+.error {
+	text-align: center;
+}
+.error .article h1 a {
+	text-indent: -65535px;
+	background-image: url('/img/jglovis/main/pob_logo.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 147px;
+	height: 46px;		
+}

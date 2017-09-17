@@ -1,0 +1,387 @@
+/*price-info */
+.product-show .price-info {
+	display: table;
+	width: 100%;
+	/* border-top: 3px solid black; */
+	border-bottom: 3px solid black;
+	border-left: 1px solid #ddd;
+	border-right: 2px solid #ddd;	
+	margin-top: 0px;
+	height: 400px;
+}
+.product-show .price-info > div {
+	display: table-row;
+}
+
+.product-show .price-info > div .preview {
+	display: table-cell;
+	width: 450px;
+	border-right: 2px solid #ddd; 
+} 
+/**/
+.product-show .price-info > div .preview_tab{
+	width: 331px;
+	text-align: center;
+}
+.product-show .price-info > div .preview_tab,
+.product-show .price-info > div .preview_contents{
+	/* display: table-cell; */
+	vertical-align: top;
+	/* float: left; */
+	/* border: 1px solid #ccc;  */
+}
+
+.product-show .price-info > div .preview_tab .tab,
+.product-show .price-info > div .preview_tab .number_slideshow_nav.scroll_nav {	
+	padding-left: 0px;
+	margin: 0px;	
+}
+.product-show .price-info > div .number_slideshow{
+	display: table-cell;
+}
+.product-show .price-info > div .preview_tab .number_slideshow_nav.scroll_nav li {
+	margin: 0px;
+	float: none;
+	background: none;
+	height: auto;
+	border: 1px solid #555;
+	border-radius: 0 0 0 0;
+}
+.product-show .price-info > div .preview_tab .number_slideshow_nav.scroll_nav li.selected {
+	border: 2px solid #555;
+}
+.product-show .price-info > div .preview_tab .number_slideshow_nav.scroll_nav li a{	padding: 0px;
+	width: auto;
+	display: block;
+	margin: 0px;
+	
+}
+
+.product-show .price-info > div .preview_tab .number_slideshow_nav.scroll_nav li a img{
+	display: block;
+}
+.product-show .price-info > div .preview_tab .number_slideshow_nav.scroll_nav {
+	display: block;
+}
+
+.product-show .price-info > div .preview_tab ul li{
+/* 	height: 105px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin-top: -1px; */
+	display: inline-block;
+	float: none;
+}
+
+/* .product-show .price-info > div .preview_tab ul li a{
+	height: 0px;
+} */
+.product-show .price-info > div .preview_tab ul li.last{
+	border-bottom: 1px solid #ccc;
+}
+
+.product-show .price-info > div div.preview_contents {
+	/* margin-top: 36px; */	
+	width: 331px;	
+}
+.product-show .price-info > div .number_slideshow.scroller{
+	position: static;
+	margin: 0px;
+	border-right: 1px solid #ccc;	
+}
+
+.product-show .price-info > div div.preview_contents .scroll_view{
+	padding: 0px;
+	position: relative;
+	width: 331px;
+	height: 335px;
+}
+
+.product-show .price-info > div div.preview_tab .number_slideshow_nav.scroll_nav {
+	position: static;
+	opacity: 1;
+}
+
+.product-show .price-info > div div.preview_contents .content{
+	/* margin-top: 34px; */
+}
+
+.product-show .price-info > div div.preview_contents img{
+	display: block;
+	width: 331px;
+	height: 319px;	
+}
+
+.product-show .price-info > div .preview_tab a {
+	width: 103px;
+	display: inline-block;
+	text-align: center;
+}
+.product-show .price-info > div .preview > div:first-child > a:hover {
+	background-color: #ccc;
+}
+
+.product-show .price-info > div .rating-wrap {
+	text-align: center;
+	vertical-align: top;
+	height: 25px;
+	/* padding-top: 10px; */
+}
+
+.product-show .price-info > div .preview .rating-wrap {
+	text-align: center;
+	vertical-align: top;
+	height: 25px;
+	padding-top: 10px;
+}
+/**/
+.product-show .price-info > div form {
+	display: table-cell;
+	vertical-align: top;		
+	/* width: 586px; */
+}
+
+.product-show .price-info button[type='submit'] {
+	/* background: #e78200;
+	background: #F54785; */
+	background: #ef3f6f;
+	/* border-radius: 20px 20px 20px 20px; */
+	cursor: pointer;
+	color: #fff;
+	width: 261px;
+	height: 45px;
+	font-size: 18px;
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+
+/* 테이블 */
+.product-show .price-info .product-opt{
+	border-collapse: collapse;
+	border-bottom: 2px solid #ddd;
+	width: 100%;
+}
+
+.product-show .price-info .product-opt tr{
+	border-bottom: 1px solid #ddd;	
+}
+.product-show .price-info .product-opt tr td{
+	width: 429px;
+}
+.product-show .price-info .product-opt tr:first-child{
+	border-bottom: 2px dashed #ddd;
+}
+.product-show .price-info .product-opt tr:last-child{
+	border-top: 2px solid #ddd;
+}
+.product-show .price-info .product-opt tr:first-child td{
+	padding: 10px 0px 10px 0px;
+}
+.product-show .price-info .product-opt th{
+	font-family: "돋움", "arial black", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+	padding: 10px 30px 10px 30px;
+	width: 6em;	
+}
+.product-show .price-info .product-opt select {
+	width: 388px;
+	height: 26px;
+}
+.product-show .price-info .product-opt .remain{
+	float: right;
+	margin-right: 38px;	
+	margin-top: 3px;
+	color: black;
+}
+
+/* .product-show .price-info .product-opt .remain em{
+	color: #4dbfbf;
+} */
+/* 테이블 */
+
+.product-show .price-info strong,
+.product-show .price-info strong{
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	font-size: 31px;
+	color: #ff3f3f;
+	font-weight: bold;
+}
+
+.product-show .price-info .price sub{
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	font-size: 17px;
+	color: #ff3f3f;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.product-show .price-info .total-price{
+	text-align: right;
+	padding: 6px 35px 6px 1.5em;
+}
+
+
+.product-show .price-info .total-price span{
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	font-size: 17px;	
+	font-weight: bold;
+	margin-right: 43px;
+	vertical-align: super;
+	margin-bottom: 0px;
+}
+
+.product-show h2{
+	font-size: 17px;
+	font-family: "돋움", "arial black", sans-serif;
+	/* margin: 30px 0px 20px 0px; */
+	color: #666;
+	height: 40px;
+	line-height: 40px;
+	background-color: #66cccc;
+	color: #fff;	
+	border-right: 3px solid #66cccc;
+	padding-left: 1em;
+	width: 98.4%;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+/*price-info */
+
+.product-show .desc{
+	text-align: center;
+}
+
+/*tab*/
+.product-show .product-contents .tab{
+	width:100%;
+	
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-top: 3px solid #ccc;
+}
+
+
+.product-show .product-contents .tab li{
+	/*width: 33.2%;*/	
+	border: 1px solid #ccc;
+}
+.product-show .product-contents .tab li:first-child{
+	border-right: 1px solid #ccc;
+	width: auto;
+}
+.product-show .product-contents .tab li a{
+	text-decoration: none;	
+	font-family: "돋움", "arial black", "sans-serif";
+	background-color: #fff;
+	color: #666;
+	display: block;
+	font-size: 15px;	
+	text-align: center;	
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+}
+.product-show .product-contents .tab li a:hover,
+.product-show .product-contents .tab li a.selected{	
+	background-color: #ccc;
+	color: #fff;
+}
+/*tab*/
+
+/*이정훈 2013-11-14*/
+.contents .section{
+	margin-top: 0px;
+}
+.contents .header h1{
+	margin-top: 0px;
+	font-size: 18px;
+	display: inline-block;
+}
+
+
+#aside .left_banner h3{
+	margin-bottom: 0px;
+}
+.product-show .price-info .product-opt tr td{
+	width: 429px;
+}
+/*이정훈 2013-11-14*/
+
+
+/* 제품 보기 - 옵션 필수 입력 부분 block 속성 넣기 - 2013.12.04 by jhson [시작] */
+.product-show .validator select + .valid-msg { display: block; }
+/* 제품 보기 - 옵션 필수 입력 부분 block 속성 넣기 - 2013.12.04 by jhson [종료] */
+
+/* 모바일용 레이아웃 추가 - 2013.12.02 by jhson [시작] */
+@media all and (min-width: 1024px){
+	
+}
+@media all and (max-width: 1023px){
+	.product-show .price-info { display: block; border-left: 0px solid #ddd; border-right: 0px solid #ddd; height: auto;}
+	.product-show .price-info > div { display: block; position: relative; } /*data-rule='tabContents'*/
+	.product-show .price-info > div .number_slideshow.scroller{	position: static; margin: 0px; border-right: 1px solid #ccc; height: auto; width: 100%; border: 0px; display: block;}
+	.product-show .price-info > div .preview_tab { display: table; width: 100%; border-collapse: collapse; border: 1px solid #ccc; position: relative;  /* top: 350px; */ border-left: 0px none #fff; border-right: 0px none #fff; }
+	.product-show .price-info > div div.preview_contents { display: block; width: 100%; margin: 0; top:0; border-bottom: 3px solid #888; border-left: 0px none #fff; border-right: 0px none #fff;}
+	.product-show .price-info > div div.preview_contents ul { margin: 0 auto; }
+	.product-show .price-info > div form { display: block; /* margin-top: 350px; */ width: 100%;}
+	
+	.product-show .price-info > div .preview_tab > a { height: auto; width: 35px; border: 1px solid #ccc; display: table-cell; vertical-align: middle; }
+	.product-show .price-info > div .preview_tab > a:first-child{ border-left: none; }
+	.product-show .price-info > div .preview_tab > a:last-child{ border-right: none; }
+	.product-show .price-info > div .preview_tab ul { /* border: 1px solid #ccc; */ /* display: table-cell; */ width:100%; margin: 0 auto; }
+	.product-show .price-info > div .preview_tab ul li { display: inline-block; width: 50px; border-width: 0px; margin: 0; }
+	.product-show .price-info > div .preview_tab > a span.artn-icon-32 { vertical-align: middle; }
+	
+	
+	.product-show .price-info > div .preview_tab ul li a,
+	.product-show .price-info > div .preview_tab ul li img { display: block; width: 100%; height: auto; }
+	
+	.product-show .product-contents .tab{width: 99.9%;}
+	.product-show .price-info > div div.preview_contents .content { margin: 0; text-align: center; }
+	.product-show .price-info > div div.preview_contents img { display: inline; }
+	
+	.product-show .price-info .product-opt th { height: 60px; vertical-align: center; padding: 0 0 0 1em; }
+	.product-show .price-info .product-opt tr td { width: 75%; }
+	.product-show .price-info .product-opt select { width: 90%; }	
+	.product-show .desc img{ width: 100%; }
+	.product-show h2 { width: auto; border-width: 0px; }
+	
+	.footer-button a.m-action-icon:first-child { background-color: #66cccc; border-radius: 5px; }
+	.product-show .price-info > div .rating-wrap {margin-top: 3px;}
+}
+@media all and (max-width: 640px){
+	
+}
+@media all and (max-width: 320px){
+	.product-show .price-info > div .preview_tab ul li { display: inline-block; width: 70px; height: 70px; border-width: 0px; margin: 0; }
+}
+
+#button_SubmitToCartList {
+	border-radius: 5px;
+	background-color: #ef3f6f;
+	color: #fff;
+	font-size: 2em;
+	vertical-align: middle;
+	text-align: center;
+}
+/* 모바일용 레이아웃 추가 - 2013.12.02 by jhson [종료] */
+
+/* 구매리스트 - 2014.02.11 by thkim [시작] */
+.article.payment-list .board-list tbody .col-subject-sub,
+.article.payment-list .board-list tbody .col-price {
+	text-align: left;
+	padding-left: 20px;
+}
+.article.payment-list .board-list tbody .col-subject-sub .opt-name{
+	display: block;
+}
+@media all and (max-width: 1023px){
+	.article.payment-list .board-list tbody .col-subject-sub .opt-name{
+		display: none;	
+	}
+}
+/* 구매리스트 - 2014.02.11 by thkim [종료] */

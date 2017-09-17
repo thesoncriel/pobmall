@@ -1,0 +1,41 @@
+
+
+.sub5_6 table{
+	border-collapse: collapse; 
+}
+
+.sub5_6 table tr{
+	border-bottom: 1px solid #cccccc; 
+	
+}
+
+.sub5_6 table tr th{
+	border-right: 1px solid #cccccc;
+	padding-left: 10px;
+	padding-right: 45px; 
+}
+.sub5_6 table tr th label{
+	display: inline-block;
+	width: 65px;
+	text-align: left;
+}
+
+.sub5_6 table tr td{	
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px; 
+}
+
+.sub5_6 table tr td input[type="text"]{
+	width: 150px;
+}
+
+.sub5_6 table tr+tr+tr+tr+tr+tr+tr td input[type="text"],
+.sub5_6 table tr td textarea{
+	width: 98%;
+}
+.sub5_6 table tr td textarea{
+	height: 240px;
+	resize: none;
+	margin-top: 5px;
+}

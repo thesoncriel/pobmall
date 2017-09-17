@@ -1,0 +1,109 @@
+.mini-board.myposts
+{
+    margin: 0 auto;
+    width: 800px;
+}
+.mini-board.myposts .top
+{
+    height: 170px;
+    margin-top: 20px;
+}
+.mini-board.myposts .top .mini-sub
+{
+	white-space: nowrap;
+	width: 15em;
+	overflow: hidden;
+	display: inline-block;
+}
+.mini-board.myposts .top .left,
+.mini-board.myposts .top .right
+{
+    font-size: 15px;
+    width: 49%;
+    height: 100%;
+    border: 1px solid #e7e7e7;
+    background-color: #f9f9f9;
+}
+.mini-board.myposts .top .left
+{
+    float: left;
+}
+.mini-board.myposts .top .right
+{
+    float: right;
+}
+.mini-board.myposts .bottom
+{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    clear: both;
+    height: 250px;
+}
+.mini-board.myposts .top li:nth-child(even),
+.mini-board.myposts .bottom tr:nth-child(even)
+{
+    background-color: #ccc;
+}
+.mini-board.myposts .top li:nth-child(even),
+.mini-board.myposts .top li:nth-child(even) a,
+.mini-board.myposts .top li:nth-child(even) span,
+.mini-board.myposts .bottom tr:nth-child(even),
+.mini-board.myposts .bottom tr:nth-child(even) a,
+.mini-board.myposts .bottom tr:nth-child(even) span
+{
+    color: #fff;
+}
+.mini-board.myposts .sub_title
+{
+    position: relative;
+}
+.mini-board.myposts .sub_title a
+{
+    float: right;
+}
+.mini-board.myposts .top .sub_title
+{
+    height:30px;
+    background-color: #66cccc;
+}
+.mini-board.myposts .top .sub_title span
+{
+    font-size: 17px;
+    font-family: '맑은 고딕','malgunGothic';
+    font-weight: bold;
+    color: #fff;
+}
+.mini-board.myposts .top .sub_title a
+{
+    font-size: 11px;
+    font-family: '돋움','Dotum';
+    font-weight: bold;
+    line-height: 30px;
+    color: #fff;
+}
+.mini-board.myposts .top .left .sub_title,
+.mini-board.myposts .top .right .sub_title,
+.mini-board.myposts .top li
+{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 12pt;
+    color: #666;
+}
+.mini-board.myposts .bottom .sub_title
+{
+    font-size: 17px;
+    font-family: '맑은 고딕','malgunGothic';
+    font-weight: bold;
+    color: #777;
+}
+.mini-board.myposts .bottom .sub_title a
+{
+    font-size: 11px;
+    font-family: '돋움','Dotum';
+    font-weight: bold;
+    line-height: 30px;
+    color: #777;
+}

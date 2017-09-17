@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="artn-admin" namespace="/admin" extends="artn-common">
+        <interceptors>  
+		    <interceptor name="admin" class="artn.common.interceptor.AuthAdminInterceptor"></interceptor>   
+		    <interceptor-stack name="adminStack">      
+			    <interceptor-ref name="admin" />     
+			    <interceptor-ref name="defaultStack" />
+		    </interceptor-stack>
+	 	</interceptors>
+	 	<default-interceptor-ref name="adminStack"></default-interceptor-ref>
+	 	
+	 	<action name="main" class="artn.common.controller.UserAction" method="menuAdmin">
+            <result>/WEB-INF/view/admin/main.jsp</result>
+        </action>
+    </package>
+    
+    <package name="adminAuth" namespace="/admin/auth" extends="artn-admin">
+        <action name="list" class="artn.common.controller.UserAuthAction" method="list">
+            <result>/WEB-INF/view/admin/auth/list.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.UserAuthAction" method="show">
+            <result>/WEB-INF/view/admin/auth/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.UserAuthAction" method="write">
+            <result>/WEB-INF/view/admin/auth/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.UserAuthAction" method="modify">
+            <result type="redirect">list</result>
+        </action>
+        <action name="delete" class="artn.common.controller.UserAuthAction" method="delete">
+            <result type="redirect">list</result>
+        </action>
+    </package>
+    
+    <package name="adminBoard" namespace="/admin/board" extends="artn-admin">
+        <action name="list" class="artn.common.controller.BoardAction" method="authBoardList">
+        	<result>/WEB-INF/view/admin/board/list.jsp</result>
+        </action>        
+        <action name="modify" class="artn.common.controller.BoardAction" method="authBoardModify">
+        	<result type="redirect">list?contents=${contents }</result>
+        </action>  
+    </package>
+    
+    <package name="adminDelivery" namespace="/admin/delivery" extends="artn-admin">
+        <action name="list" class="artn.common.controller.DeliveryAction" method="list">
+        	<result>/WEB-INF/view/admin/delivery/list.jsp</result>
+        </action>        
+        <action name="modify" class="artn.common.controller.DeliveryAction" method="modify">
+        	<result type="redirect">list?contents=${contents }</result>
+        </action>  
+    </package>
+    
+     <package name="adminPopup" namespace="/admin/popup" extends="artn-admin">
+        <action name="list" class="artn.common.controller.PopupAction" method="list">
+            <result>/WEB-INF/view/admin/popup/list.jsp</result>
+        </action>
+        <action name="show" class="artn.common.controller.PopupAction" method="show">
+            <result>/WEB-INF/view/admin/popup/show.jsp</result>
+        </action>
+        <action name="edit" class="artn.common.controller.PopupAction" method="edit">
+            <result>/WEB-INF/view/admin/popup/edit.jsp</result>
+        </action>
+        <action name="write" class="artn.common.controller.PopupAction" method="write">
+            <result>/WEB-INF/view/admin/popup/edit.jsp</result>
+        </action>
+        <action name="modify" class="artn.common.controller.PopupAction" method="modify">
+            <result type="redirect">list?id_group=${id_group}&amp;contents=${contents }</result>
+        </action>
+        <action name="delete" class="artn.common.controller.PopupAction" method="delete">
+            <result type="redirect">list?id_group=${id_group}&amp;contents=${contents }</result>
+        </action>
+        <action name="delivery" class="artn.common.controller.PopupAction" method="popup">
+            <result>/WEB-INF/view/admin/popup/delivery.jsp</result>
+        </action>        
+    </package>
+</struts>

@@ -1,0 +1,260 @@
+.product-section .category {
+	border: 1px solid;
+	padding: 13px 13px 13px 3px;
+	margin-top: 15px;
+}
+.product-section .category ul {
+	display: inline-block;
+}
+.product-section .category ul li {
+	display: inline-block;
+	font-size: 14px;
+	border-right: 1px solid;
+	padding: 0px 10px 0px 10px;	
+}
+.product-section .category ul li.title {
+	font-weight: bold;
+}
+.product-section .category ul li a {
+	text-decoration: none;	
+}
+.product-section .category ul li a:hover {
+	color: #ff6633;
+}
+
+.product-section .category ul li a.selected {
+	color: #ff6633;
+}
+
+.product-grid{
+	/* text-align: center; */
+	margin-left: 62px;
+}
+.product-grid:first-child{
+	margin-bottom: 70px;
+}
+.product-grid>h2{
+	/* background-image: url('/img/jglovis/category_tooltip.png');
+	background-repeat: no-repeat;  */
+	height: 43px;
+	/* width: 114px; */	
+	color: #666;
+	/* border: 1px solid red; */
+	font-family: "NanumGothic";
+	font-size: 22px;
+	font-weight: bold;
+	padding-top: 4px;
+	line-height: 60px;
+}
+
+.product-search input[type='text']{
+	height: 25px;
+	border: 2px solid #ccc;
+}
+.product-search .artn-button{
+	height: 30px;
+}
+
+/* 미디어쿼리 1024px 이상 - 2013.11.26 by jhson [시작] */
+/************
+	주의!!!!!!!!! 주의!!!!!!!!!
+	주의!!!!!!!!! 주의!!!!!!!!!
+	※ IE8 에선 미디어 쿼리가 안먹히는 관계로 ie.css 에 아래의 내용을 별도로 복사하였음.
+	추 후 본 내용이 변경 될 경우 min-width: 1024px에 해당되는 부위만 복사 하여 ie.css 의 해당 부분에 update를 같이 해 줄것
+	- 2013.11.27 by jhson
+*/
+@media all and (min-width: 1024px){
+	
+.product-search input[type='text']{ width: 315px; }
+
+.product-grid form{	
+	width: 30%;
+/* grid 수정 thkim */
+	margin: 14px;	
+	text-align: left;
+	display: inline-block;
+/* grid 수정 thkim */
+	vertical-align: top;
+}
+.product-grid .preview{
+	margin-bottom: 15px;
+}
+.product-grid .preview ul{
+	float: left;
+	border-top: 1px solid #ddd;
+}
+.product-grid .preview ul li{
+	width: 35px;
+	height: 35px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	display: inherit;
+}
+
+.product-grid .preview .content{
+	width: 195px;
+	/* height: 160px; */
+	display: block;
+}
+
+.product-grid .preview b{
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+}
+
+.product-grid .preview b+div{
+	text-align: center;
+	margin-top: 5px;
+}
+
+.product-grid .preview b+div a{
+	width: 27px;
+	height: 13px;
+	display: inline-block;
+	border: 0px solid red;
+}
+.product-grid .preview b+div>a{
+	background-color: #000000;
+}
+.product-grid .preview b+div a+a{
+	background-color: #3E7280;
+}
+.product-grid .desc{
+/* grid 수정 thkim */
+	/* height: 100px; */
+/* grid 수정 thkim */
+	border: 0px solid red;
+}
+
+.product-grid .desc h3{
+	font-size: 17px;
+}
+
+.product-grid .desc h4{
+	font-size: 12px;
+}
+
+.product-grid .footer{
+	position: relative;	
+}
+/* .product-grid .footer>div{
+	float: left;
+	border: 0px solid red;
+}
+.product-grid .footer>div+div{
+	float: right;
+	border: 0px solid red;
+} */
+/* grid 수정 thkim */
+.product-grid .more-view{
+	margin:10px 0px 8px 0px;
+}
+
+.product-grid .footer .price {
+	font-size: 17px;
+	vertical-align: middle;
+}
+
+.product-grid .footer .artn-button{
+	position: absolute;
+	right: 65px;
+	top: -6px;	
+}
+
+.product-grid .footer .artn-button.board.ui-button{
+	background: #e78200;
+	/*background: #F54785;*/
+	border-radius:20px 20px 20px 20px;
+	cursor:pointer;
+	color:#fff;
+	width: 100px;
+}
+.product-grid .footer .artn-button.board.ui-button:hover{
+	background: #FF1F6F;
+	/*background: #E75C00;*/
+}
+}/* 미디어쿼리 1024px 이상 - 2013.11.26 by jhson [종료] */
+
+/* 제품 그리드: 상품없을 때 중앙정렬 - 2014.01.20 by jhson [시작] */
+.product-grid .not-exists{ text-align: center; padding-right: 62px; }
+/* 제품 그리드: 상품없을 때 중앙정렬 - 2014.01.20 by jhson [종료] */
+
+/* 미디어쿼리 641 ~ 1023px - 2013.11.26 by jhson [시작] */
+@media all and (max-width: 1023px){
+	.product-search input[type='text']{ width: 75%; }
+	
+	.product-grid { padding-left: 1%; padding-right: 1%; }
+	.product-grid form a,
+	.product-grid form a img { display: block; width: 100%; }
+	.product-grid { margin: 0; text-align: justify; }
+	.product-grid:after { content: ' '; display: inline-block; width: 100%; height: 0; }
+	.product-grid form { border: 7px solid #ccc; display: inline-block; width: 30%; margin-bottom: 3%; vertical-align: top; }
+	.product-grid form h4 { font-size: 13px; }
+	.product-grid form strong.price { font-size: 17px; }
+	.product-grid .desc,
+	.product-grid .footer { background-color: #ccc; }
+	
+	.product-grid form a.m-hdn-hdn { display: none; }
+	
+	.product-grid .not-exists{ padding-right: 0; }
+}
+/* 미디어쿼리 641 ~ 1023px - 2013.11.26 by jhson [종료] */
+
+/* 미디어쿼리 640px 이상 - 2013.11.26 by jhson [시작] */
+@media all and (max-width: 640px){
+	.product-grid { margin: 0; }
+	.product-grid form { width: 45%; margin-bottom: 3%; vertical-align: top; }
+	
+	.product-grid form a.m-hdn { display: none; }
+}
+/* 미디어쿼리 640px 이상 - 2013.11.26 by jhson [종료] */
+
+/*통계*/
+.purchase-stats ul.status li{
+	display: inline-block;
+	float: left;			
+}
+.purchase-stats ul.status li.last{
+	float: none;
+}
+.purchase-stats ul.status li a{	
+	width: 110px;
+	display: block;
+	text-decoration: none;
+	height: 30px;
+	font-size: 15px;
+	background-color: red;
+	color: #fff;	
+	text-align: center;
+	border: 1px solid #ccc;		
+}
+.purchase-stats ul.status li a.selected,
+.purchase-stats ul.status li a:hover{
+	background-color: blue;
+}	
+.purchase-stats ul.status li span{	
+	line-height: 27px;
+}
+.purchase-stats .stats-item > div{
+	
+}
+.purchase-stats .stats-item > div > div {
+	margin-top:30px;
+	margin-left:80px;	
+	width:700px;
+}
+.purchase-stats table{
+	display: none;
+}
+.purchase-stats .stats-item h2{
+	font-size: 20px;
+	color: #444;
+	
+}
+div[data-new-window='true']{
+	display: none;
+}
+/*통계*/

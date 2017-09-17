@@ -1,0 +1,201 @@
+/*price-info */
+.product-show .price-info {
+	display: table;
+	width: 100%;
+	/* border-top: 3px solid black; */
+	border-bottom: 3px solid black;
+	border-left: 1px solid #ddd;
+	border-right: 2px solid #ddd;	
+}
+.product-show .price-info {
+	display: table;
+	width: 100%;
+}
+
+.product-show .price-info .preview {
+	display: table-row;	
+	border-right: 2px solid #ddd; 
+}
+/**/
+.product-show .price-info .preview .preview-tab,
+.product-show .price-info .preview .preview-contents {
+	display: table-cell;	
+}
+.product-show .price-info .preview .preview-tab {
+	float: left;
+	border: 1px solid #ccc; 
+}
+.product-show .price-info > .preview .preview-tab ul li{
+	height: 105px;
+	border-top: 1px solid #ccc;
+}
+.product-show .price-info > .preview .preview-tab ul li.last{
+	border-bottom: 1px solid #ccc;
+}
+
+.product-show .price-info > .preview > div.preview-contents{
+	
+}
+.product-show .price-info > .preview > div.preview-contents img{
+	display: block;
+	width: 343px;
+	height: 321px;
+	margin-top: 36px;
+}
+
+.product-show .price-info > .preview > div.preview-tab a {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.product-show .price-info > .preview > div.preview-tab > a:hover {
+	background-color: #ccc;
+}
+
+.product-show .price-info > .preview .rating-wrap {
+	text-align: center;
+	vertical-align: top;
+	height: 25px;
+	padding-top: 10px;
+}
+/**/
+.product-show .price-info > div.preview form {
+	display: table-cell;
+	vertical-align: top;		
+}
+
+.product-show .price-info button[type='submit'] {
+	/* background: #e78200;
+	background: #F54785; */
+	background: #ef3f6f;
+	/* border-radius: 20px 20px 20px 20px; */
+	cursor: pointer;
+	color: #fff;
+	width: 318px;
+	height: 49px;
+	font-size: 20px;
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+
+/* 테이블 */
+.product-show .price-info .product-opt{
+	border-collapse: collapse;
+	border-bottom: 2px solid #ddd;
+	width: 100%;
+}
+.product-show .price-info .product-opt tr{
+	border-bottom: 1px solid #ddd;	
+}
+.product-show .price-info .product-opt tr:first-child{
+	border-bottom: 2px dashed #ddd;
+}
+.product-show .price-info .product-opt tr:last-child{
+	border-top: 2px solid #ddd;
+}
+.product-show .price-info .product-opt tr:first-child td{
+	padding: 10px 0px 10px 0px;
+}
+.product-show .price-info .product-opt th{
+	font-family: "돋움", "arial black", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+	padding: 10px 30px 10px 30px;
+	width: 6em;	
+}
+.product-show .price-info .product-opt select {
+	width: 388px;
+	height: 26px;
+}
+.product-show .price-info .product-opt .remain{
+	float: right;
+	margin-right: 38px;	
+	margin-top: 3px;
+	color: black;
+}
+
+/* .product-show .price-info .product-opt .remain em{
+	color: #4dbfbf;
+} */
+/* 테이블 */
+
+.product-show .price-info .price{
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	font-size: 31px;
+	color: #ff3f3f;
+	font-weight: bold;
+}
+
+.product-show .price-info .price sub{
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	font-size: 17px;
+	color: #ff3f3f;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.product-show .price-info .total-price{
+	text-align: right;
+	padding: 6px 35px 6px 1.5em;
+}
+
+.product-show .price-info .buttons{
+	text-align: right;
+	margin: 0 33px 1.6em 0px;	
+}
+.product-show .price-info .total-price span{
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	font-size: 17px;	
+	font-weight: bold;
+	margin-right: 43px;
+	vertical-align: super;
+}
+
+.product-show h2{
+	font-size: 17px;
+	font-family: "돋움", "arial black", sans-serif;
+	/* margin: 30px 0px 20px 0px; */
+	color: #666;
+	height: 40px;
+	line-height: 40px;
+	background-color: #66cccc;
+	color: #fff;			
+}
+/*price-info */
+
+.product-show .desc{
+	text-align: center;
+}
+
+/*tab*/
+.product-show .product-contents .tab{
+	display: block;
+}
+.product-show .product-contents .tab li:first-child{
+	border-right: 1px solid #fff;
+}
+.product-show .product-contents .tab li{
+	display: inline-block;	
+	float: left;	
+	width: 33.3%;
+}
+.product-show .product-contents .tab li.last{
+	float: none;
+	border: 0;
+}
+.product-show .product-contents .tab li a{
+	text-decoration: none;
+	background-color: #ef3f6f;
+	color: #fff;
+	font-family: "malgun gothic", "arial black", "sans-serif";
+	display: block;
+	font-size: 32px;	
+	text-align: center;
+	padding-bottom: 8px;
+}
+.product-show .product-contents .tab li a:hover{
+	background-color: #fff;
+	color: black;
+}
+/*tab*/

@@ -1,0 +1,500 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.top-contents{
+    /*background-image: url("../img/main/site-header.1x390.png");*/
+    background-repeat: repeat-x;
+    min-width: 100%;
+    /*height: 390px;*/
+    margin: 0px;
+    
+    display: inline-table;
+}
+.top-contents .medifit_slide,
+.bottom-contents{  
+    width: 990px;
+    margin: 0 auto;
+}
+
+.top-contents .medifit_slide .medifit_slide_nav{
+    border: 1px solid #dedede;
+    float: left;
+    width: 225px;
+    margin-right: 10px;
+}
+.top-contents .medifit_slide .medifit_slide_nav li a{
+    float : left;
+    margin: 1px;
+    text-align: right;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    height: 30px;
+    padding-right: 5px;
+    background: url(images/pattern/heal365-bg-pattern2.png);
+    
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0px;
+    width: 97%;
+    text-decoration: none;
+}
+
+
+.top-contents .medifit_slide .medifit_slide_nav li.selected a{    
+    background: #31c1d2;
+}
+.top-contents .medifit_slide .medifit_slide_nav li a .user-name{
+    font-size: 12px;
+    display: block;
+}
+.top-contents .medifit_slide .medifit_slide_img{
+    float: left;
+    width: 472px;
+    height: 287px;
+}
+.top-contents .medifit_slide .medifit_slide_img li{
+    position: absolute;
+}
+.top-contents .medifit_slide .medifit_slide_img li a span{
+    position: absolute;
+    
+    background-color:rgba(252,252,252,0.8); 
+    margin-left: 1px;
+    margin-top: 176px;
+    height: 80px;
+    width: 450px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+.top-contents .medifit_slide .medifit_slide_img li a span strong{
+    display: block;
+    font-size: 26px;
+    margin-top: 10px;
+}
+.top-contents .medifit_slide .medifit_slide_img li a img{
+    padding: 1px;
+    border: 1px solid #dedede;
+}
+.top-contents .medifit_slide .service-interview,
+.top-contents .medifit_slide .player-img{
+    /*float: left;*/
+    margin-left: 10px;
+}
+.top-contents .medifit_slide .player-img{
+    padding: 1px;
+    border: 1px solid #dedede;
+    display: inline-block;
+}
+
+.top-contents .medifit_slide .service-interview{    
+    border: 1px solid #dedede;
+    display: inline-block;
+}
+.top-contents .medifit_slide .service-interview a{
+    background: url(images/bizbgpack/heal365-bg-edge/heal365-bg-edge3-on.png) no-repeat;
+    background-position: 100% 0%;
+    
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    
+    padding-left: 55px;
+    padding-top: 30px;
+    display: block;
+    height: 100px;
+    width: 170px;
+    background-color: #a2a1a1;
+    text-decoration: none; 
+}
+.top-contents .medifit_slide .service-interview a span{
+    display: block; 
+    
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: -20px;
+    border-bottom: 1px solid white;
+	padding-bottom: 10px;
+	width: 170px;
+}
+
+
+.section.bottom-contents .section{
+    display: inline-block;
+    /*margin-top: 0px;*/
+    margin: 25px 0px 10px 0px;
+}
+
+.mini-board .content .mini-sub{
+	white-space:nowrap; 
+	width:15em;
+	overflow:hidden;
+	display: inline;
+}
+
+.bottom-contents h2{
+    background: url(images/bizicon/heal365-bg-pack.png) no-repeat;
+    background-position: -10px -297px;
+    padding-left: 15px;
+    font-size: 13px;
+    color: #343434;
+}
+
+.bottom-contents .customer-center{
+	margin-top: 146px;
+}
+	
+.bottom-contents .section .address {
+    width: 210px;
+    height: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    font-style: normal;
+    /*font-family: myriadPro-Regular, sans-serif;*/
+    text-align: center;
+    padding-bottom: 8px;
+    margin-top: 5px;
+    background-color: #dedede;
+}
+.bottom-contents .section .address span{
+    background: url(images/bizbgpack/heal365-bg-edge/heal365-bg-edge2-on.png) no-repeat;
+    background-position: 100% 0%;
+    width: 210px;
+    padding-top: 8px;
+    display: inline-block;
+    height: 22px;
+}
+
+
+
+
+
+
+.bottom-contents .section+.section{
+    vertical-align: top;
+    /*margin-top: 5px;*/
+    margin-left: 25px;
+}
+
+.bottom-contents .section .product-slider {
+    border: 7px solid #6cd9e4;  
+    margin: 0px;
+    width: 325px;
+    height: 216px;
+}
+.bottom-contents .section .product-slider h2{
+    margin: 15px 0px 0px 15px;
+    float: left;
+    vertical-align: top;
+    margin
+    border: 1px solid red;
+}
+/*.bottom-contents .section .product-slider .artn-icon-32.more {  
+    height: 20px;
+    margin: 9px 30px 0px 0px;
+    float: right;
+}*/
+
+/*제품 시작 */
+.number_slideshow{
+    line-height: 20px;
+    font-size: 11px;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    padding: 0px;
+    margin-left: 10px;
+    position: relative;
+    top: 20px;
+    display: none;
+    
+    width : 292px;
+    height : 152px;
+    
+    clear: both;
+}
+
+.number_slideshow .scroll_view{
+    border: black;
+    solid : 0px;
+    height:150px; 
+    width: 290px; 
+    padding: 1px; 
+    background-color: white; 
+}
+
+.number_slideshow ul{
+    margin: 0px;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+
+.number_slideshow ul li{
+     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    position: absolute;
+}
+
+.number_slideshow ul li a{
+    text-decoration: none;
+}
+
+.number_slideshow ul li a img{
+    border: none;
+}
+
+.bottom-contents .section .product-slider ul:last-of-type{
+    float: left;    
+    margin-left: 10px;
+}
+
+.number_slideshow .number_slideshow_nav{
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    padding: 0px;
+    margin: 0px;
+    position: absolute; 
+    bottom: 10px;
+}
+
+.number_slideshow .number_slideshow_nav li{
+    /*box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    -o-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    -khtml-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);*/
+    
+    position: relative;
+    
+    margin: 0px 6px 0px 0px;
+    float: left;    /*숫자 버튼 순서 왼쪽부터*/
+    height: 13px;
+    
+    border: #000; 
+    solid : 0px; 
+    background-color:#b7b4b7;
+}
+
+.bottom-contents .section .product-slider ul:last-of-type li.selected{
+	background-color: #33cccc;
+}
+
+.number_slideshow .number_slideshow_nav li a{ 
+    padding: 0px 8px 0px 8px;
+    display: block;
+    margin-top: -3px;
+    font-size: 10px;
+    font-weight: bold;
+    color : white;
+}
+
+.bottom-contents .section .product-slider ul:last-of-type li.selected a{
+    font-weight: bold;
+    text-align: center;
+    vertical-align: text-top;
+	height: 13px;
+    
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    
+    color: white;
+}
+
+.number_slideshow ul li p{
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px 5px 0px 5px;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    font-size: 13px;
+    line-height: 23px;
+}
+/*제품 끝  */
+
+
+
+
+
+.bottom-contents .section+.section+.section{
+    vertical-align: top;
+    margin-left: 25px;
+}
+.bottom-contents .section+.section+.section h2+div{ 
+    /*width: 328px;*/
+    margin-top: 12px;
+    display: inline-block;
+}
+
+.bottom-contents .section+.section+.section>h2+div a {
+    background-image: url(/img/contents/bizicon/heal365-bg-pack.png);
+    display: inline-block;
+    width: 64px;
+    height: 64px; 
+    font-size: 12px;
+    
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    
+    margin-left: 5px;
+}
+
+.bottom-contents .section+.section+.section h2+div .medifit {
+    background-position: 0px 0px;
+}
+.bottom-contents .section+.section+.section h2+div .stretching {    
+    background-position: -65px 0px;
+}
+.bottom-contents .section+.section+.section h2+div .plus365 {
+    background-position: -130px 0px;
+}
+.bottom-contents .section+.section+.section h2+div .myheal {
+    background-position: -194px 0px;
+}
+
+
+
+
+
+
+/*배너 시작  */
+.bottom-contents .section+.section+.section .aside{ 
+    margin-top: 45px;
+}
+
+.amazon_scroller{
+    padding: 0px;
+    margin-top: 5px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    -khtml-border-radius: 0px;
+    border: 1px solid #cccccc; 
+    padding : 0px; 
+    background-color : none;
+    
+    width : 280px;
+    height : 61px;
+    position : relative; 
+}
+
+.amazon_scroller .amazon_scroller_mask{
+    position: absolute;
+    margin: 0px 15px 0px 15px;
+    overflow: hidden;
+}
+
+.amazon_scroller .amazon_scroller_mask{
+	width : 244px;
+    height : 61px;
+}
+
+.amazon_scroller .amazon_scroller_mask ul{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    
+    position : absolute;
+    /* left : 732px; */
+}
+
+.amazon_scroller ul li{
+    padding: 0px;
+    margin: 0px 5px 0px 5px;
+    list-style: none;
+    float: left;
+    text-align: left;
+    display:inline;
+}
+
+.amazon_scroller ul li a{
+    text-decoration: none;
+}
+
+.amazon_scroller ul li a img{
+    border: none;
+    width : 234px;
+    height : 61px;
+}
+
+.amazon_scroller .amazon_scroller_nav{
+    margin-top: 25px;
+    top : 5.5px;
+    width : 280px;
+}
+
+.amazon_scroller .amazon_scroller_nav.scroll_nav li{
+	width: 130px;
+}
+
+.amazon_scroller .amazon_scroller_nav li a{
+    cursor: pointer;
+    width : 16px;
+    height : 16px;
+    background : url(images/artn-icons.png) no-repeat;
+    /* position: absolute; */
+}
+.amazon_scroller .amazon_scroller_nav li .prev{
+    float: left;
+    background-position: -162px -16px;
+}
+.amazon_scroller .amazon_scroller_nav li .next{
+    float: right;
+    background-position: -176px -16px;
+}
+
+
+.amamzon_scroller .amazon_scroller_mask ul li{
+	width : 234px;
+}
+
+
+.amazon_scroller ul li a amazon_scroller_title{
+    overflow:hidden;
+}
+.amazon_scroller ul li a:hover{
+    text-decoration: underline;
+}
+
+/*배너 끝  */
+
+/*error*/
+.error{
+    margin: 0 auto;
+    width: 1024px;
+}
+/*error*/
+
+
+/*.bottom-contents .section+.section+.section h2+div a span{
+    display: block;
+    margin-top: 75px;
+    color:  #666666;
+}*/
+
+
+/*좌측 메뉴의 바로가기 버튼 스타일: 둘 곳이 없어서 잠깐 여기 둠[시작] - 2013.09.25 by jhson*/
+.main-menu-shortcut{
+	display: block; 
+	background-image: url(images/pattern/heal365-bg-pattern2.png); 
+	height: 30px; 
+	font-size: 20px; 
+	color: #fff; 
+	text-align: center; 
+	line-height: 30px;
+}
+/*좌측 메뉴의 바로가기 버튼 스타일: 둘 곳이 없어서 잠깐 여기 둠[종료] - 2013.09.25 by jhson*/
